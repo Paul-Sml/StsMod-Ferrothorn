@@ -1,0 +1,14 @@
+{
+        "ferrothorn:BottledSheen": {
+                "NAME": "Bottled sheen",
+                "DESCRIPTIONS": ["Gain ", " #ySheen."]
+        },
+        "ferrothorn:ResonatingPotion": {
+                "NAME": "Resonating potion",
+                "DESCRIPTIONS": ["Apply ", " #yResonance."]
+        },
+        "ferrothorn:EquilibriumPotion": {
+                "NAME": "Equilibrium potion",
+                "DESCRIPTIONS": ["Increase your #yStrength or #yDexterity so it reaches the highest one."]
+        }
+}

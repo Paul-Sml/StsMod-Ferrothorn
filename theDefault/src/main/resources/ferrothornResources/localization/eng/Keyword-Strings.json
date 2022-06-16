@@ -1,0 +1,64 @@
+[
+  {
+    "NAMES": [
+      "scale",
+      "scales"
+    ],
+    "DESCRIPTION": "After receiving all #yAttacks from an enemy, deals damage back."
+  },
+  {
+    "NAMES": [
+      "weather"
+    ],
+    "DESCRIPTION": "You can only have one #yWeather at a time."
+  },
+  {
+    "NAMES": [
+      "sandstorm"
+    ],
+    "DESCRIPTION": "At the end of your turn, deal #b3 damage to ALL enemies. NL Upon exiting this #yWeather, gain #b1 #yPlated #yArmor."
+  },
+  {
+    "NAMES": [
+      "rain"
+    ],
+    "DESCRIPTION": "Reduce by #b15% received #yAttack damage. NL Upon exiting this #yWeather, add a #ySeed+ to your hand."
+  },
+  {
+    "PROPER_NAME": "Harsh Sunlight",
+    "NAMES": [
+      "harsh sunlight",
+      "harsh_sunlight"
+    ],
+    "DESCRIPTION": "Draw a card at the start of your turn. NL Upon exiting this #yWeather, gain [E] ."
+  },
+  {
+    "NAMES": [
+      "seed",
+      "seed+",
+      "seeds"
+    ]
+  },
+  {
+    "PROPER_NAME": "Leech Seed",
+    "NAMES": [
+      "leech seed",
+      "leech_seed"
+    ],
+    "DESCRIPTION": "The target loses HP at the end of each turn. Heal for half of the damage done."
+  },
+  {
+    "NAMES": [
+      "stamina"
+    ],
+    "DESCRIPTION": "Your next card that grants you #yBlock grants you additional #yBlock."
+  },
+  {
+    "PROPER_NAME": "Toxic Spikes",
+    "NAMES": [
+      "toxic spikes",
+      "toxic_spikes"
+    ],
+    "DESCRIPTION": "Whenever you are attacked, apply #yPoison back."
+  }
+]

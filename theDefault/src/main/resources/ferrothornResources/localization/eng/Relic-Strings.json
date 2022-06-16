@@ -1,0 +1,60 @@
+{
+  "ferrothorn:IronBarbs": {
+    "NAME": "Iron Barbs",
+    "FLAVOR": "Using his own invention, the Z-Drive, Ekko explores the branching possibilities of reality to craft the perfect moment.",
+    "DESCRIPTIONS": [
+      "Start each combat with #b3 #yScales."
+    ]
+  },
+  "ferrothorn:RockyHelmet": {
+    "NAME": "Rocky Helmet",
+    "FLAVOR": "Using his own invention, the Z-Drive, Ekko explores the branching possibilities of reality to craft the perfect moment.",
+    "DESCRIPTIONS": [
+      "Replaces [#67C18C]Iron [#67C18C]Barbs[]. NL Start each combat with #b",
+      " #yScales and #b",
+      " #yThorns."
+    ]
+  },
+  "ferrothorn:RareCandy": {
+    "NAME": "Rare Candy",
+    "FLAVOR": "Using his own invention, the Z-Drive, Ekko explores the branching possibilities of reality to craft the perfect moment.",
+    "DESCRIPTIONS": [
+      "Upon pickup, raise your Max HP by #b",
+      " and chose #b1 card to add to your deck."
+    ]
+  },
+  "ferrothorn:DrySkin": {
+    "NAME": "Dry Skin",
+    "FLAVOR": "While in #Rain, gain #b",
+    "DESCRIPTIONS": [
+      "While in #yRain, gain #b",
+      " #yBlock at the end of your turn. NL If you are in another #yWeather, lose #b",
+      " #yBlock instead."
+    ]
+  },
+  "ferrothorn:SandVeil": {
+    "NAME": "Sand Veil",
+    "FLAVOR": "Using his own invention, the Z-Drive, Ekko explores the branching possibilities of reality to craft the perfect moment.",
+    "DESCRIPTIONS": [
+      "While in #ySandstorm, apply #b1 #yWeak to EVERYONE at the end of your turn."
+    ]
+  },
+  "ferrothorn:SolarPower": {
+    "NAME": "Solar Power",
+    "FLAVOR": "Using his own invention, the Z-Drive, Ekko explores the branching possibilities of reality to craft the perfect moment.",
+    "DESCRIPTIONS": [
+      "While in #yHarsh #ySunlight, your #yAttacks deal #b",
+      " additional damage, but while in #yHarsh #ySunlight you also lose #b",
+      " HP at the end of your turn"
+    ]
+  },
+  "ferrothorn:Moxie": {
+    "NAME": "Moxie",
+    "FLAVOR": "Using his own invention, the Z-Drive, Ekko explores the branching possibilities of reality to craft the perfect moment.",
+    "DESCRIPTIONS": [
+      "When you deal #b",
+      " unblocked damage, draw #b",
+      " card."
+    ]
+  }
+}

@@ -1,0 +1,339 @@
+{
+  "ferrothorn:Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "ferrothorn:Defend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "ferrothorn:LeechSeed": {
+    "NAME": "Leech Seed",
+    "DESCRIPTION": "The enemy loses !M! HP at the end of each turn. Heal for half of the damage done. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL The enemy loses !M! HP at the end of each turn. Heal for half of the damage done. NL Exhaust."
+  },
+  "ferrothorn:Protect": {
+    "NAME": "Protect",
+    "DESCRIPTION": "Gain !M! Intangible. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain !M! Intangible. NL Exhaust."
+  },
+  "ferrothorn:BodyPress": {
+    "NAME": "Body Press",
+    "DESCRIPTION": "Deal !B! damage. NL Affected by Block modifiers instead of damage ones.",
+    "UPGRADE_DESCRIPTION": "Deal !B! damage. NL Affected by Block modifiers instead of damage ones. NL Ignores Frail."
+  },
+  "ferrothorn:BulletSeed": {
+    "NAME": "Bullet Seed",
+    "DESCRIPTION": "Randomly add from !M! to 5 ferrothorn:Seeds into your hand."
+  },
+  "ferrothorn:Seed": {
+    "NAME": "Seed",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust."
+  },
+  "ferrothorn:Curse": {
+    "NAME": "Curse",
+    "DESCRIPTION": "Gain !M! Strength. NL Gain !M! Dexterity. NL Shuffle a Wound into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Strength. NL Gain !M! Dexterity. NL Shuffle a Wound into your discard pile."
+  },
+  "ferrothorn:Endure": {
+    "NAME": "Endure",
+    "DESCRIPTION": "After receiving unblocked Attack damage, gain !B! Block."
+  },
+  "ferrothorn:Explosion": {
+    "NAME": "Explosion",
+    "DESCRIPTION": "Lose !M! HP. NL Deal !D! damage."
+  },
+  "ferrothorn:HyperBeam": {
+    "NAME": "Hyper Beam",
+    "DESCRIPTION": "Deal !D! damage. NL Next turn, NL lose [E]."
+  },
+  "ferrothorn:Ingrain": {
+    "NAME": "Ingrain",
+    "DESCRIPTION": "Innate. NL Heal !M! HP. NL Exhaust."
+  },
+  "ferrothorn:IronDefense": {
+    "NAME": "Iron Defense",
+    "DESCRIPTION": "Gain !M! Dexterity."
+  },
+  "ferrothorn:IronHead": {
+    "NAME": "Iron Head",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak."
+  },
+  "ferrothorn:KnockOff": {
+    "NAME": "Knock Off",
+    "DESCRIPTION": "Deal !D! damage. NL Deals an additional !M! damage for each Buff on the enemy."
+  },
+  "ferrothorn:PowerWhip": {
+    "NAME": "Power Whip",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "ferrothorn:Revenge": {
+    "NAME": "Revenge",
+    "DESCRIPTION": "Deal !D! damage. NL Double if the enemy intends to attack."
+  },
+  "ferrothorn:Rollout": {
+    "NAME": "Rollout",
+    "DESCRIPTION": "Deal !D! damage. NL Increase this card's damage by !M! this combat. Add a copy of this card to your discard pile."
+  },
+  "ferrothorn:SeedBomb": {
+    "NAME": "Seed Bomb",
+    "DESCRIPTION": "Add a ferrothorn:Seed+ to your hand and double its damage.",
+    "UPGRADE_DESCRIPTION": "Add a ferrothorn:Seed+ to your hand. NL Double the damage NL of ALL Seed cards in your hand."
+  },
+  "ferrothorn:Substitute": {
+    "NAME": "Substitute",
+    "DESCRIPTION": "Lose !M! HP. NL Gain 1 Intangible. NL Exhaust."
+  },
+  "ferrothorn:Swagger": {
+    "NAME": "Swagger",
+    "DESCRIPTION": "Apply !M! Strength to the enemy to stun him. NL Exhaust."
+  },
+  "ferrothorn:SwordDance": {
+    "NAME": "Sword Dance",
+    "DESCRIPTION": "Gain !M! Strength."
+  },
+  "ferrothorn:Sandstorm": {
+    "NAME": "Sandstorm",
+    "DESCRIPTION": "Enter ferrothorn:Sandstorm."
+  },
+  "ferrothorn:RainDance": {
+    "NAME": "Rain Dance",
+    "DESCRIPTION": "Enter ferrothorn:Rain."
+  },
+  "ferrothorn:SunnyDay": {
+    "NAME": "Sunny Day",
+    "DESCRIPTION": "Enter ferrothorn:Harsh_Sunlight."
+  },
+  "ferrothorn:WeatherBall": {
+    "NAME": "Weather Ball",
+    "DESCRIPTION": "Deal !D! damage. NL Effect varies with ferrothorn:Weather.",
+    "EXTENDED_DESCRIPTION": [
+      "Deal !D! damage twice. NL Effect varies with ferrothorn:Weather.",
+      "Deal !D! damage. NL Apply !M! Weak. NL Effect varies with ferrothorn:Weather.",
+      "Deal !D! damage. NL Apply !M! Vulnerable. NL Effect varies with ferrothorn:Weather."
+    ]
+  },
+  "ferrothorn:HeavySlam": {
+    "NAME": "Heavy Slam",
+    "DESCRIPTION": "Deal !D! damage. NL Deals additional damage equal to your Max HP exceeding 100."
+  },
+  "ferrothorn:GyroBall": {
+    "NAME": "Gyro Ball",
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each Relic you have."
+  },
+  "ferrothorn:ShoreUp": {
+    "NAME": "ShoreUp",
+    "DESCRIPTION": "Gain !M! Plated Armor. NL In ferrothorn:Sandstorm gain additional Plated Armor equal to your Dexterity."
+  },
+  "ferrothorn:SolarBeam": {
+    "NAME": "Solar Beam",
+    "DESCRIPTION": "Shuffle a *Solar *Beam *Attack into your draw pile. NL In ferrothorn:Harsh_Sunlight add it to your hand instead.",
+    "UPGRADE_DESCRIPTION": "Shuffle a *Solar *Beam *Attack+ into your draw pile. NL In ferrothorn:Harsh_Sunlight add it to your hand instead."
+  },
+  "ferrothorn:SolarBeamAttack": {
+    "NAME": "Solar Beam Attack",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust."
+  },
+  "ferrothorn:Thunder": {
+    "NAME": "Thunder",
+    "DESCRIPTION": "Remove all Block from an enemy. NL Deal !D! damage. NL In ferrothorn:Rain this costs 0."
+  },
+  "ferrothorn:Harden": {
+    "NAME": "Harden",
+    "DESCRIPTION": "Gain 1 Dexterity NL and !M! ferrothorn:Scales."
+  },
+  "ferrothorn:GrassKnot": {
+    "NAME": "Grass Knot",
+    "DESCRIPTION": "Deal !D! damage. NL Repeat for each thousand Max HP of the enemy."
+  },
+  "ferrothorn:Spikes": {
+    "NAME": "Spikes",
+    "DESCRIPTION": "Gain !M! Thorns. NL Exhaustive !stslib:ex!."
+  },
+  "ferrothorn:StealthRock": {
+    "NAME": "Stealth Rock",
+    "DESCRIPTION": "Gain !M! ferrothorn:Scales. NL Exhaust."
+  },
+  "ferrothorn:SpikyShield": {
+    "NAME": "Spiky Shield",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Thorns."
+  },
+  "ferrothorn:Taunt": {
+    "NAME": "Taunt",
+    "DESCRIPTION": "The enemy instantly attacks you for !M! damage twice.",
+    "UPGRADE_DESCRIPTION": "The enemy instantly attacks you for !M! damage three times."
+  },
+  "ferrothorn:ToxicSpikes": {
+    "NAME": "Toxic Spikes",
+    "DESCRIPTION": "Gain !M! ferrothorn:toxic_spikes. NL Exhaustive !stslib:ex!."
+  },
+  "ferrothorn:Toxic": {
+    "NAME": "Toxic",
+    "DESCRIPTION": "Apply !M! Poison."
+  },
+  "ferrothorn:RockPolish": {
+    "NAME": "Rock Polish",
+    "DESCRIPTION": "Draw !M! cards. NL Remove Frail."
+  },
+  "ferrothorn:AncientPower": {
+    "NAME": "Ancient Power",
+    "DESCRIPTION": "Gain !M! Dexterity. NL Gain !M! Metallicize. NL Gain !M! Plated Armor."
+  },
+  "ferrothorn:SappySeed": {
+    "NAME": "Sappy Seed",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! ferrothorn:Leech_Seed."
+  },
+  "ferrothorn:StrengthSap": {
+    "NAME": "Strength Sap",
+    "DESCRIPTION": "Heal HP equal to enemy's Strength. NL Enemy loses !M! Strength. NL Exhaust."
+  },
+  "ferrothorn:CottonGuard": {
+    "NAME": "Cotton Guard",
+    "DESCRIPTION": "Gain !B! Block !M! times."
+  },
+  "ferrothorn:WorrySeed": {
+    "NAME": "Worry Seed",
+    "DESCRIPTION": "Add !M! ferrothorn:Seeds into your hand. NL Then transform ALL Seed cards in your hand into *Insomnia."
+  },
+  "ferrothorn:Insomnia": {
+    "NAME": "Insomnia",
+    "DESCRIPTION": "Draw !M! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Exhaust."
+  },
+  "ferrothorn:DoubleTeam": {
+    "NAME": "Double Team",
+    "DESCRIPTION": "Gain !B! Block. NL Next turn gain !B! Block."
+  },
+  "ferrothorn:AcidSpray": {
+    "NAME": "Acid Spray",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! ferrothorn:Stamina."
+  },
+  "ferrothorn:Confide": {
+    "NAME": "Confide",
+    "DESCRIPTION": "Gain !M! ferrothorn:Stamina."
+  },
+  "ferrothorn:Synthesis": {
+    "NAME": "Synthesis",
+    "DESCRIPTION": "Gain !B! Block. NL Activate exiting effects of your current ferrothorn:Weather."
+  },
+  "ferrothorn:KingsShield": {
+    "NAME": "King's Shield",
+    "DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked this turn, apply !M! Weak back."
+  },
+  "ferrothorn:WideGuard": {
+    "NAME": "Wide Guard",
+    "DESCRIPTION": "Gain !B! Block. NL Block is not removed at the start of your next turn.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Block is not removed at the start of your next !M! turns."
+  },
+  "ferrothorn:Stockpile": {
+    "NAME": "Stockpile",
+    "DESCRIPTION": "Gain !B! Block. NL Gain ferrothorn:Stamina equal to the damage blocked."
+  },
+  "ferrothorn:MetalBurst": {
+    "NAME": "Metal Burst",
+    "DESCRIPTION": "Whenever you gain Block, deal !M! damage to a random enemy."
+  },
+  "ferrothorn:SpitUpSwallow": {
+    "NAME": "Spit Up / Swallow",
+    "DESCRIPTION": "Chose one : NL Deal !D! Damage to ALL enemies X times, NL or Gain !B! Block X times."
+  },
+  "ferrothorn:SpitUp": {
+    "NAME": "Spit Up",
+    "DESCRIPTION": "Deal !D! Damage to ALL enemies X times."
+  },
+  "ferrothorn:Swallow": {
+    "NAME": "Swallow",
+    "DESCRIPTION": "Gain !B! Block X times."
+  },
+  "ferrothorn:ShiftGear": {
+    "NAME": "Shift Gear",
+    "DESCRIPTION": "Gain !B! Block. NL Dexterity affects this card twice.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Dexterity affects this card three times."
+  },
+  "ferrothorn:FollowMe": {
+    "NAME": "Follow Me",
+    "DESCRIPTION": "Gain !B! Block. NL ALL enemies instantly attack you for !M! damage."
+  },
+  "ferrothorn:PoisonSting": {
+    "NAME": "Poison Sting",
+    "DESCRIPTION": "Deal !D! damage. NL Apply Poison equal to unblocked damage dealt."
+  },
+  "ferrothorn:StickyWeb": {
+    "NAME": "Sticky Web",
+    "DESCRIPTION": "Whenever you are attacked, draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you are attacked, draw !M! card."
+  },
+  "ferrothorn:DiamondStorm": {
+    "NAME": "Diamond Storm",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block twice."
+  },
+  "ferrothorn:AcidArmor": {
+    "NAME": "Acid Armor",
+    "DESCRIPTION": "Gain !M! Metallicize. NL Gain !M! ferrothorn:toxic_spikes."
+  },
+  "ferrothorn:BanefulBunker": {
+    "NAME": "Baneful Bunker",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! ferrothorn:toxic_spikes."
+  },
+  "ferrothorn:Superpower": {
+    "NAME": "Superpower",
+    "DESCRIPTION": "Deal !D! damage. NL Lose !M! Strength and Dexterity."
+  },
+  "ferrothorn:SeedFlare": {
+    "NAME": "Seed Flare",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable."
+  },
+  "ferrothorn:DefenseCurl": {
+    "NAME": "Defense Curl",
+    "DESCRIPTION": "Gain !M! Metallicize. NL At the end of combat, heal !M! HP."
+  },
+  "ferrothorn:Payback": {
+    "NAME": "Payback",
+    "DESCRIPTION": "Deal !D! damage. NL If this card is in your hand at the end of your turn, increase its damage by !M! this combat."
+  },
+  "ferrothorn:ShellTrap": {
+    "NAME": "Shell Trap",
+    "DESCRIPTION": "Gain !B! Block. NL Whenever you are attacked this turn, deal !M! damage to the attacker."
+  },
+  "ferrothorn:QuickGuard": {
+    "NAME": "Quick Guard",
+    "DESCRIPTION": "Gain !B! Block. NL Draw a card for each enemy that intends to attack you."
+  },
+  "ferrothorn:Wish": {
+    "NAME": "Wish",
+    "DESCRIPTION": "Next turn gain Block equal to half your current Block."
+  },
+  "ferrothorn:TeeterDance": {
+    "NAME": "Teeter Dance",
+    "DESCRIPTION": "Gain !B! Block for each enemy in combat."
+  },
+  "ferrothorn:FoulPlay": {
+    "NAME": "Foul Play",
+    "DESCRIPTION": "Deal !D! damage. NL Use the enemy's powers instead of yours to calculate damage."
+  },
+  "ferrothorn:AerialAce": {
+    "NAME": "Aerial Ace",
+    "DESCRIPTION": "Deal !D! damage. NL You can always play this card. NL This card always deals !D! damage."
+  },
+  "ferrothorn:RagePowder": {
+    "NAME": "Rage Powder",
+    "DESCRIPTION": "Gain !B! Block. NL The enemy performs its attack on you and himself.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL The enemy performs its attack on EVERYONE.",
+    "EXTENDED_DESCRIPTION": [
+      "The enemy doesn't intend to attack."
+    ]
+  },
+  "ferrothorn:Moonlight": {
+    "NAME": "Moonlight",
+    "DESCRIPTION": "Choose a ferrothorn:Weather to enter. NL Activate exiting effects of the other two. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Choose a ferrothorn:Weather to enter. NL  Activate exiting effects of the other two. NL Exhaust."
+  },
+  "ferrothorn:Flatter": {
+    "NAME": "Flatter",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Strength to the enemy."
+  },
+  "ferrothorn:GrassyTerrain": {
+    "NAME": "Grassy Terrain",
+    "DESCRIPTION": "Apply !M! Regen to EVERYONE."
+  }
+}

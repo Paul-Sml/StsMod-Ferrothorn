@@ -1,0 +1,38 @@
+{
+        "ferrothorn:LeechSeedPower": {
+                "NAME": "Leech Seed",
+                "DESCRIPTIONS": ["You applied #b", " #yResonance stack, at 3 draw two cards, deal damage equal to your strength and gain 4 Block.", " #yResonance stacks, at 3 draw two cards, deal damage equal to your strength and gain 4 Block."]
+        },
+        "ferrothorn:Scales": {
+                "NAME": "Scales",
+                "DESCRIPTIONS": ["After receiving all #yAttacks from an enemy, deals #b"," damage back."]
+        },
+        "ferrothorn:Stamina": {
+                "NAME": "Stamina",
+                "DESCRIPTIONS": ["Your next card that grants you #yBlock grants you an additional #b"," #yBlock."]
+        },
+        "ferrothorn:ToxicSpikesPower": {
+                "NAME": "Toxic Spikes",
+                "DESCRIPTIONS": ["When attacked, applies #b"," #yPoison back."]
+        },
+        "ferrothorn:KingsShieldPower": {
+                "NAME": "King's Shield",
+                "DESCRIPTIONS": ["When attacked, applies #b"," #yWeak back."]
+        },
+        "ferrothorn:StockpilePower": {
+                "NAME": "Stockpile",
+                "DESCRIPTIONS": ["Gain #yStamina equal to the damage blocked."]
+        },
+        "ferrothorn:HyperBeamPower": {
+                "NAME": "Recover",
+                "DESCRIPTIONS": ["Lose #b"," [E] next turn."]
+        },
+        "ferrothorn:StickyWebPower": {
+                "NAME": "Sticky Web",
+                "DESCRIPTIONS": ["When attacked, draw #b"," card."," cards."]
+        },
+        "ferrothorn:EndurePower": {
+                "NAME": "Endure",
+                "DESCRIPTIONS": ["After receiving unblocked #yAttack damage, gain #b"," Block."]
+        }
+}
