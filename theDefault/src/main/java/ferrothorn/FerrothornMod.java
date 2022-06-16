@@ -585,6 +585,8 @@ public class FerrothornMod extends FerroWeatherSubscriber implements
         UnlockTracker.unlockCard(Flatter.ID);
         BaseMod.addCard(new GrassyTerrain());
         UnlockTracker.unlockCard(GrassyTerrain.ID);
+        BaseMod.addCard(new Assist());
+        UnlockTracker.unlockCard(Assist.ID);
 
         logger.info("Done adding cards!");
     }

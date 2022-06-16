@@ -325,8 +325,8 @@
   },
   "ferrothorn:Moonlight": {
     "NAME": "Moonlight",
-    "DESCRIPTION": "Choose a ferrothorn:Weather to enter. NL Activate exiting effects of the other two. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Choose a ferrothorn:Weather to enter. NL  Activate exiting effects of the other two. NL Exhaust."
+    "DESCRIPTION": "Choose a ferrothorn:Weather to enter. Activate exiting effects of the other two. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Choose a ferrothorn:Weather to enter. Activate exiting effects of the other two. NL Exhaust."
   },
   "ferrothorn:Flatter": {
     "NAME": "Flatter",
@@ -335,5 +335,13 @@
   "ferrothorn:GrassyTerrain": {
     "NAME": "Grassy Terrain",
     "DESCRIPTION": "Apply !M! Regen to EVERYONE."
+  },
+  "ferrothorn:Assist": {
+    "NAME": "Assist",
+    "DESCRIPTION": "Gain !B! Block. NL Place a card from your discard pile on top of your draw pile."
+  },
+  "ferrothorn:SuckerPunch": {
+    "NAME": "Sucker Punch",
+    "DESCRIPTION": "Deal !D! damage. If the enemy intends to attack, gain !B! Block instead."
   }
 }

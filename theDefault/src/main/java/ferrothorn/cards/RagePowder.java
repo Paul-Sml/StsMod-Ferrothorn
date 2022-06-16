@@ -22,7 +22,7 @@ public class RagePowder extends AbstractDynamicCard {
     public static final String IMG = makeCardPath("RagePowder.png");
 
     private static final CardRarity RARITY = CardRarity.RARE; //  Up to you, I like auto-complete on these
-    private static final CardTarget TARGET = CardTarget.SELF;  //   since they don't change much.
+    private static final CardTarget TARGET = CardTarget.ENEMY;  //   since they don't change much.
     private static final CardType TYPE = CardType.SKILL;  //
     public static final CardColor COLOR = Ferrothorn.Enums.COLOR_FERROTHORN;
 
@@ -73,9 +73,10 @@ public class RagePowder extends AbstractDynamicCard {
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         boolean canUse = super.canUse(p, m);
 
-        if (m.getIntentBaseDmg() > 0) {
-            return canUse;
-        }
+        if (m != null)
+            if (m.getIntentBaseDmg() > 0) {
+                return canUse;
+            }
 
         this.cantUseMessage = languagePack.getCardStrings(ID).EXTENDED_DESCRIPTION[0];
         return false;

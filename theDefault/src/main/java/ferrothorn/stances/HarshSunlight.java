@@ -102,7 +102,7 @@ public class HarshSunlight extends AbstractStance
     public void onExitStance() {
         AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
         this.stopIdleSfx();
-        AbstractDungeon.effectsQueue.remove(Sun);
+        Sun.isDone = true;
     }
 
     @Override
