@@ -69,7 +69,7 @@ import java.util.Properties;
  */
 
 @SpireInitializer
-public class FerrothornMod extends FerroWeatherSubscriber implements
+public class FerrothornMod implements
         EditCardsSubscriber,
         EditRelicsSubscriber,
         EditStringsSubscriber,
@@ -355,6 +355,7 @@ public class FerrothornMod extends FerroWeatherSubscriber implements
         
         BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
 
+        BaseMod.subscribe(new FerroWeatherSubscriber());
         
         // =============== EVENTS =================
         
