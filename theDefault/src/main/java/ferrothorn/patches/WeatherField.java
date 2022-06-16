@@ -10,5 +10,5 @@ import ferrothorn.characters.Ferrothorn;
         method = SpirePatch.CLASS
 )
 public class WeatherField {
-    //public static final SpireField<Ferrothorn.WeatherType> corrupted = new SpireField<>(() -> );
+    public static final SpireField<Ferrothorn.WeatherType> weather = new SpireField<>(() -> null);
 }
