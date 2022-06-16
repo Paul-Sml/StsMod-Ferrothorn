@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.curses.Normality;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import ferrothorn.FerrothornMod;
@@ -46,14 +47,17 @@ public class AerialAce extends AbstractDynamicCard {
 
     @Override
     public boolean hasEnoughEnergy() {
-        if (EnergyPanel.totalCount < this.costForTurn && !this.freeToPlay() && !this.isInAutoplay) {
+        if (AbstractDungeon.actionManager.turnHasEnded) {
+            this.cantUseMessage = TEXT[9];
+            return false;
+        } else if (EnergyPanel.totalCount < this.costForTurn && !this.freeToPlay() && !this.isInAutoplay) {
             this.cantUseMessage = TEXT[11];
             return false;
         }
         return true;
     }
 
-    @Override
+    /*@Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         return true;
     }
@@ -63,7 +67,7 @@ public class AerialAce extends AbstractDynamicCard {
         if (card == this)
             return true;
         return super.canPlay(card);
-    }
+    }*/
 
     @Override
     public void upgrade() {
