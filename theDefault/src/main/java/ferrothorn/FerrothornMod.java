@@ -8,6 +8,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
@@ -76,6 +77,7 @@ public class FerrothornMod implements
         EditKeywordsSubscriber,
         EditCharactersSubscriber,
         OnStartBattleSubscriber,
+        StartGameSubscriber,
         PostInitializeSubscriber {
     // Make sure to implement the subscribers *you* are using (read basemod wiki). Editing cards? EditCardsSubscriber.
     // Making relics? EditRelicsSubscriber. etc., etc., for a full list and how to make your own, visit the basemod wiki.
@@ -89,6 +91,7 @@ public class FerrothornMod implements
     public static int checkEnergy = 0;
     public static int usedEnergy = 0;
     public static boolean exhaustedThisTurn;
+    public static boolean isShiny;
     public void receiveOnBattleStart (AbstractRoom room) {
         FerrothornMod.lastTurnAttacked = false;
         FerrothornMod.gainedStrDexThisTurn = false;
@@ -610,7 +613,6 @@ public class FerrothornMod implements
     }
 
 
-
     // There are better ways to do this than listing every single individual card, but I do not want to complicate things
     // in a "tutorial" mod. This will do and it's completely ok to use. If you ever want to clean up and
     // shorten all the imports, go look take a look at other mods, such as Hubris.
@@ -695,5 +697,10 @@ public class FerrothornMod implements
     // in order to avoid conflicts if any other mod uses the same ID.
     public static String makeID(String idText) {
         return getModID() + ":" + idText;
+    }
+
+    @Override
+    public void receiveStartGame() {
+        isShiny = MathUtils.random(1,4096) == 1;
     }
 }
