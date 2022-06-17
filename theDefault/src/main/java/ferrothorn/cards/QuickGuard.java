@@ -28,7 +28,7 @@ public class QuickGuard extends AbstractDynamicCard {
 
     public QuickGuard() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.baseBlock = 7;
+        this.baseBlock = 8;
         this.magicNumber = this.baseMagicNumber = 1;
     }
 

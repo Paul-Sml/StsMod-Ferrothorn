@@ -407,6 +407,8 @@ public class FerrothornMod implements
         UnlockTracker.markRelicAsSeen(SandVeil.ID);
         BaseMod.addRelicToCustomPool(new SolarPower(), Ferrothorn.Enums.COLOR_FERROTHORN);
         UnlockTracker.markRelicAsSeen(SolarPower.ID);
+        BaseMod.addRelicToCustomPool(new Moxie(), Ferrothorn.Enums.COLOR_FERROTHORN);
+        UnlockTracker.markRelicAsSeen(Moxie.ID);
 
         logger.info("Done adding relics!");
     }
@@ -588,6 +590,21 @@ public class FerrothornMod implements
         UnlockTracker.unlockCard(GrassyTerrain.ID);
         BaseMod.addCard(new Assist());
         UnlockTracker.unlockCard(Assist.ID);
+        BaseMod.addCard(new SuckerPunch());
+        UnlockTracker.unlockCard(SuckerPunch.ID);
+        BaseMod.addCard(new SuckerPunch());
+        UnlockTracker.unlockCard(SuckerPunch.ID);
+        BaseMod.addCard(new MagnetRise());
+        UnlockTracker.unlockCard(MagnetRise.ID);
+        BaseMod.addCard(new Defog());
+        UnlockTracker.unlockCard(Defog.ID);
+        BaseMod.addCard(new HelpingHand());
+        UnlockTracker.unlockCard(HelpingHand.ID);
+        BaseMod.addCard(new MorningSun());
+        UnlockTracker.unlockCard(MorningSun.ID);
+        BaseMod.addCard(new AfterYou());
+        UnlockTracker.unlockCard(AfterYou.ID);
+
 
         logger.info("Done adding cards!");
     }

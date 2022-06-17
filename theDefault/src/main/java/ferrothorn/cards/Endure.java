@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.cards.red.Barricade;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BarricadePower;
+import com.megacrit.cardcrawl.powers.PenNibPower;
 import ferrothorn.FerrothornMod;
 import ferrothorn.characters.Ferrothorn;
 import ferrothorn.powers.EndurePower;
@@ -30,7 +31,7 @@ public class Endure extends AbstractDynamicCard {
 
     public Endure() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.baseBlock = 10;
+        this.baseBlock = 11;
     }
 
     // Actions the card should do.
@@ -39,14 +40,12 @@ public class Endure extends AbstractDynamicCard {
         this.addToBot(new ApplyPowerAction(p, p, new EndurePower(p, p, this.block), this.block));
     }
 
-
     //Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
             upgradeBlock(5);
-            this.selfRetain = true;
         }
     }
 }

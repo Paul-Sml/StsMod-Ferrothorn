@@ -9,8 +9,8 @@
   },
   "ferrothorn:LeechSeed": {
     "NAME": "Leech Seed",
-    "DESCRIPTION": "The enemy loses !M! HP at the end of each turn. Heal for half of the damage done. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL The enemy loses !M! HP at the end of each turn. Heal for half of the damage done. NL Exhaust."
+    "DESCRIPTION": "Apply !M! ferrothorn:Leech_Seed. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Apply !M! ferrothorn:Leech_Seed. NL Exhaust."
   },
   "ferrothorn:Protect": {
     "NAME": "Protect",
@@ -37,7 +37,7 @@
   },
   "ferrothorn:Endure": {
     "NAME": "Endure",
-    "DESCRIPTION": "After receiving unblocked Attack damage, gain !B! Block."
+    "DESCRIPTION": "The first time you lose HP, gain !B! Block."
   },
   "ferrothorn:Explosion": {
     "NAME": "Explosion",
@@ -45,7 +45,7 @@
   },
   "ferrothorn:HyperBeam": {
     "NAME": "Hyper Beam",
-    "DESCRIPTION": "Deal !D! damage. NL Next turn, NL lose [E]."
+    "DESCRIPTION": "Deal !D! damage. NL Next turn, lose [E] ."
   },
   "ferrothorn:Ingrain": {
     "NAME": "Ingrain",
@@ -82,7 +82,7 @@
   },
   "ferrothorn:Substitute": {
     "NAME": "Substitute",
-    "DESCRIPTION": "Lose !M! HP. NL Gain 1 Intangible. NL Exhaust."
+    "DESCRIPTION": "Lose !M! HP. NL Prevent the next time you would lose HP. NL Exhaust."
   },
   "ferrothorn:Swagger": {
     "NAME": "Swagger",
@@ -165,7 +165,7 @@
   },
   "ferrothorn:ToxicSpikes": {
     "NAME": "Toxic Spikes",
-    "DESCRIPTION": "Gain !M! ferrothorn:toxic_spikes. NL Exhaustive !stslib:ex!."
+    "DESCRIPTION": "Gain !M! ferrothorn:Toxic_Spikes. NL Exhaustive !stslib:ex!."
   },
   "ferrothorn:Toxic": {
     "NAME": "Toxic",
@@ -269,11 +269,11 @@
   },
   "ferrothorn:AcidArmor": {
     "NAME": "Acid Armor",
-    "DESCRIPTION": "Gain !M! Metallicize. NL Gain !M! ferrothorn:toxic_spikes."
+    "DESCRIPTION": "Gain !M! Metallicize. NL Gain !M! ferrothorn:Toxic_Spikes."
   },
   "ferrothorn:BanefulBunker": {
     "NAME": "Baneful Bunker",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! ferrothorn:toxic_spikes."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! ferrothorn:Toxic_Spikes."
   },
   "ferrothorn:Superpower": {
     "NAME": "Superpower",
@@ -317,8 +317,8 @@
   },
   "ferrothorn:RagePowder": {
     "NAME": "Rage Powder",
-    "DESCRIPTION": "Gain !B! Block. NL The enemy performs its attack on you and himself.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL The enemy performs its attack on EVERYONE.",
+    "DESCRIPTION": "If the enemy intends to attack, gain !B! Block. NL The enemy performs its attack on you and himself.",
+    "UPGRADE_DESCRIPTION": "If the enemy intends to attack, gain !B! Block. NL The enemy performs its attack on EVERYONE.",
     "EXTENDED_DESCRIPTION": [
       "The enemy doesn't intend to attack."
     ]
@@ -342,6 +342,35 @@
   },
   "ferrothorn:SuckerPunch": {
     "NAME": "Sucker Punch",
-    "DESCRIPTION": "Deal !D! damage. If the enemy intends to attack, gain !B! Block instead."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy intends to attack, gain !B! Block instead."
+  },
+  "ferrothorn:MorningSun": {
+    "NAME": "Morning Sun",
+    "DESCRIPTION": "Gain hazards varying with ferrothorn:Weather. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain hazards varying with ferrothorn:Weather.",
+    "EXTENDED_DESCRIPTION": [
+      "Gain 4 ferrothorn:Scales. NL ",
+      "Gain 3 ferrothorn:Toxic_Spikes. NL ",
+      "Gain 2 Thorns. NL ",
+      "Whenever you are attacked, draw 1 card. NL "
+    ]
+  },
+  "ferrothorn:AfterYou": {
+    "NAME": "After You",
+    "DESCRIPTION": "Gain !B! Block. NL Put a card from your hand on top of your draw pile. NL It costs 0 until played."
+  },
+  "ferrothorn:Defog": {
+    "NAME": "Defog",
+    "DESCRIPTION": "Exit your ferrothorn:Weather. NL Remove Strength on EVERYONE. NL Exhaust."
+  },
+  "ferrothorn:HelpingHand": {
+    "NAME": "Helping Hand",
+    "DESCRIPTION": "Your next attack deals double the damage. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Your next attack deals double the damage."
+  },
+  "ferrothorn:MagnetRise": {
+    "NAME": "Magnet Rise",
+    "DESCRIPTION": "Gain [E] for each enemy in combat. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain [E] . NL Gain [E] for each enemy in combat. NL Exhaust."
   }
 }

@@ -1,47 +1,49 @@
 package ferrothorn.cards;
 
-import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.unique.SetupAction;
+import com.megacrit.cardcrawl.cards.green.Setup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import ferrothorn.FerrothornMod;
 import ferrothorn.characters.Ferrothorn;
+import ferrothorn.powers.ToxicSpikesPower;
 
 import static ferrothorn.FerrothornMod.makeCardPath;
 
-public class Flatter extends AbstractDynamicCard {
+public class AfterYou extends AbstractDynamicCard {
 
-    public static final String ID = FerrothornMod.makeID(Flatter.class.getSimpleName());
-    public static final String IMG = makeCardPath("Flatter.png");
+    public static final String ID = FerrothornMod.makeID(AfterYou.class.getSimpleName());
+    public static final String IMG = makeCardPath("AfterYou.png");
+
+    // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON; //  Up to you, I like auto-complete on these
-    private static final CardTarget TARGET = CardTarget.ENEMY;  //   since they don't change much.
+    private static final CardTarget TARGET = CardTarget.SELF;  //   since they don't change much.
     private static final CardType TYPE = CardType.SKILL;  //
     public static final CardColor COLOR = Ferrothorn.Enums.COLOR_FERROTHORN;
 
-    private static final int COST = 1;
+    private static final int COST = 2;
 
-    public Flatter() {
+    public AfterYou() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        this.baseBlock = 9;
         this.magicNumber = this.baseMagicNumber = 1;
-        this.baseBlock = 13;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new GainBlockAction(p, this.block));
-        this.addToBot(new ApplyPowerAction(m, p, new StrengthPower(m, this.magicNumber), this.magicNumber));
+        this.addToBot(new GainBlockAction(p, p, block));
+        this.addToBot(new SetupAction());
     }
 
-    //Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(4);
+            upgradeBlock(3);
         }
     }
 }

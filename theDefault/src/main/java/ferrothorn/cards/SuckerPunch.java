@@ -17,7 +17,7 @@ import static ferrothorn.FerrothornMod.makeCardPath;
 public class SuckerPunch extends AbstractDynamicCard {
 
     public static final String ID = FerrothornMod.makeID(SuckerPunch.class.getSimpleName());
-    public static final String IMG = makeCardPath("QuickGuard.png");
+    public static final String IMG = makeCardPath("SuckerPunch.png");
 
     private static final CardRarity RARITY = CardRarity.COMMON; //  Up to you, I like auto-complete on these
     private static final CardTarget TARGET = CardTarget.ENEMY;  //   since they don't change much.

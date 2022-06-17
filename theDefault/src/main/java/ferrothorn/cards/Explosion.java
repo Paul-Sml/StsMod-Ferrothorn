@@ -25,8 +25,8 @@ public class Explosion extends AbstractDynamicCard {
 
     public Explosion() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage = 30;
-        this.magicNumber = this.baseMagicNumber = 4;
+        this.baseDamage = 28;
+        this.magicNumber = this.baseMagicNumber = 5;
     }
 
     @Override

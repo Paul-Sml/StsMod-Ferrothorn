@@ -30,7 +30,7 @@ public class RagePowder extends AbstractDynamicCard {
 
     public RagePowder() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.baseBlock = 27;
+        this.baseBlock = 23;
     }
 
     // Actions the card should do.
@@ -73,13 +73,15 @@ public class RagePowder extends AbstractDynamicCard {
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         boolean canUse = super.canUse(p, m);
 
-        if (m != null)
+        if (m != null) {
             if (m.getIntentBaseDmg() > 0) {
                 return canUse;
+            } else {
+                this.cantUseMessage = languagePack.getCardStrings(ID).EXTENDED_DESCRIPTION[0];
+                return false;
             }
-
-        this.cantUseMessage = languagePack.getCardStrings(ID).EXTENDED_DESCRIPTION[0];
-        return false;
+        }
+        return canUse;
     }
 
     //Upgraded stats.

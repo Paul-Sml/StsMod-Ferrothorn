@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.BufferPower;
 import com.megacrit.cardcrawl.powers.IntangiblePower;
 import ferrothorn.FerrothornMod;
 import ferrothorn.characters.Ferrothorn;
@@ -32,14 +33,14 @@ public class Substitute extends AbstractDynamicCard {
     public Substitute() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.exhaust = true;
-        this.magicNumber = this.baseMagicNumber = 7;
+        this.magicNumber = this.baseMagicNumber = 8;
         this.isInnate = false;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAction(p, new DamageInfo(p, magicNumber, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
-        this.addToBot(new ApplyPowerAction(p, p, new IntangiblePower(p, 1), 1));
+        this.addToBot(new ApplyPowerAction(p, p, new BufferPower(p, 1), 1));
     }
 
     //Upgraded stats.
@@ -47,7 +48,7 @@ public class Substitute extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(-4);
+            upgradeMagicNumber(-3);
             this.isInnate = true;
         }
     }

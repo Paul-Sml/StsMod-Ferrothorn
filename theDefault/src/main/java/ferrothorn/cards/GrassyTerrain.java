@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import ferrothorn.FerrothornMod;
 import ferrothorn.characters.Ferrothorn;
 import ferrothorn.powers.LeechSeedPower;
+import ferrothorn.powers.RegenFerrothornPower;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static ferrothorn.FerrothornMod.makeCardPath;
@@ -39,7 +40,7 @@ public class GrassyTerrain extends AbstractDynamicCard {
         this.addToBot(new ApplyPowerAction(p, p, new RegenPower(p, this.magicNumber), this.magicNumber));
         for (AbstractMonster q: AbstractDungeon.getCurrRoom().monsters.monsters) {
             if (!q.isDying && !q.isDead) {
-                this.addToBot(new ApplyPowerAction(q, p, new RegenPower (q, this.magicNumber), this.magicNumber));
+                this.addToBot(new ApplyPowerAction(q, p, new RegenFerrothornPower(q, p, this.magicNumber), this.magicNumber));
             }
         }
     }

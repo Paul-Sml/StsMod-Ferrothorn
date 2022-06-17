@@ -34,5 +34,9 @@
         "ferrothorn:EndurePower": {
                 "NAME": "Endure",
                 "DESCRIPTIONS": ["After receiving unblocked #yAttack damage, gain #b"," Block."]
+        },
+        "ferrothorn:EndurePower": {
+                "NAME": "Endure",
+                "DESCRIPTIONS": ["At the end of your turn, heal #b"," #yHP, then reduce #yRegen by #b1."]
         }
 }

@@ -22,7 +22,7 @@ import static ferrothorn.FerrothornMod.makePowerPath;
 public class LeechSeedPower extends AbstractPower implements CloneablePowerInterface,HealthBarRenderPower {
     public AbstractCreature source;
 
-    private static final Color barColor = Color.valueOf("44ee44");
+    private static final Color barColor = Color.valueOf("55ff55");
 
     public static final String POWER_ID = FerrothornMod.makeID("LeechSeedPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);

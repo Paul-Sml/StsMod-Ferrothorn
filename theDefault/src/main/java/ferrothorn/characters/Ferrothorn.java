@@ -102,6 +102,7 @@ public class Ferrothorn extends CustomPlayer {
     // =============== TEXTURES OF BIG ENERGY ORB ===============
 
     public static final String[] orbTextures = {
+            "ferrothornResources/images/char/defaultCharacter/orb/orb.png",/*
             "ferrothornResources/images/char/defaultCharacter/orb/layer1.png",
             "ferrothornResources/images/char/defaultCharacter/orb/layer2.png",
             "ferrothornResources/images/char/defaultCharacter/orb/layer3.png",
@@ -112,7 +113,7 @@ public class Ferrothorn extends CustomPlayer {
             "ferrothornResources/images/char/defaultCharacter/orb/layer2d.png",
             "ferrothornResources/images/char/defaultCharacter/orb/layer3d.png",
             "ferrothornResources/images/char/defaultCharacter/orb/layer4d.png",
-            "ferrothornResources/images/char/defaultCharacter/orb/layer5d.png",};
+            "ferrothornResources/images/char/defaultCharacter/orb/layer5d.png",*/};
 
     // =============== /TEXTURES OF BIG ENERGY ORB/ ===============
 

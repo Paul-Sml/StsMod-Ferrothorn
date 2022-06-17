@@ -30,7 +30,7 @@ public class FerroWeatherMap {
             }
         }
 
-        double percentCorrupt = 0.5;
+        double percentCorrupt = 0.3;
         int baseCorrupt = (int)Math.ceil(potentialWeatherNodes.size() * percentCorrupt);
 
         Collections.shuffle(potentialWeatherNodes, rng.random);
