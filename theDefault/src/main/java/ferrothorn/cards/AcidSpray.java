@@ -8,11 +8,13 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.green.DodgeAndRoll;
+import com.megacrit.cardcrawl.cards.red.Reaper;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 import com.megacrit.cardcrawl.vfx.combat.MindblastEffect;
 import ferrothorn.FerrothornMod;
+import ferrothorn.actions.AcidSprayAction;
 import ferrothorn.characters.Ferrothorn;
 import ferrothorn.powers.HyperBeamPower;
 import ferrothorn.powers.Stamina;
@@ -25,7 +27,7 @@ public class AcidSpray extends AbstractDynamicCard {
     public static final String IMG = makeCardPath("AcidSpray.png");
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
-    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = Ferrothorn.Enums.COLOR_FERROTHORN;
 
@@ -33,21 +35,20 @@ public class AcidSpray extends AbstractDynamicCard {
 
     public AcidSpray() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.exhaust = true;
-        this.baseDamage = 5;
-        this.magicNumber = this.baseMagicNumber = 4;
+        this.baseDamage = 4;
+        this.isMultiDamage = true;
     }
 
+
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.POISON));
-        this.addToBot(new ApplyPowerAction(p, p, new Stamina(p, p, this.magicNumber), this.magicNumber));
+        this.addToBot(new AcidSprayAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.POISON));
     }
 
     @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(3);
+            upgradeDamage(2);
         }
     }
 }

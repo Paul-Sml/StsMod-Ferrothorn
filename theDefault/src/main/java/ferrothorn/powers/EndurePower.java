@@ -40,7 +40,7 @@ public class EndurePower extends AbstractPower implements CloneablePowerInterfac
         this.source = source;
 
         type = PowerType.BUFF;
-        isTurnBased = true  ;
+        isTurnBased = false;
 
 
         //loadRegion(CurlUpPower.POWER_ID);
@@ -59,8 +59,8 @@ public class EndurePower extends AbstractPower implements CloneablePowerInterfac
     public int onLoseHp(int damageAmount) {
         if (damageAmount < this.owner.currentHealth && damageAmount > 0) {
             this.flash();
-            this.addToBot(new GainBlockAction(this.owner, this.owner, this.amount));
-            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+            this.addToTop(new GainBlockAction(this.owner, this.owner, this.amount));
+            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         }
         return super.onLoseHp(damageAmount);
     }

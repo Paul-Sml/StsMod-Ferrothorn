@@ -42,16 +42,16 @@ public class Synthesis extends AbstractDynamicCard {
         this.addToBot(new GainBlockAction(p, this.block));
 
         if (p.stance.ID.equals(Sandstorm.STANCE_ID))
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PlatedArmorPower(p, 1), 1));
+            this.addToBot(new ApplyPowerAction(p, p, new PlatedArmorPower(p, 1), 1));
 
-        if (p.stance.ID.equals(Rain.STANCE_ID)) {
+        else if (p.stance.ID.equals(Rain.STANCE_ID)) {
             AbstractCard c = new Seed();
             c.upgrade();
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, 1));
+            this.addToBot(new MakeTempCardInHandAction(c, 1));
         }
 
         else if (p.stance.ID.equals(HarshSunlight.STANCE_ID))
-            AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
+            this.addToBot(new GainEnergyAction(1));
 
     }
 

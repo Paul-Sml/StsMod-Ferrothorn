@@ -25,6 +25,7 @@ public class IronBarbs extends CustomRelic {
 
     public IronBarbs() {
         super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.CLINK);
+//        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordTitle("thedragonknight:Graft")), BaseMod.getKeywordDescription("thedragonknight:Graft")));
     }
 
     @Override

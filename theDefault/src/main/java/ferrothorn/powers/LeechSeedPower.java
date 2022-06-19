@@ -43,7 +43,7 @@ public class LeechSeedPower extends AbstractPower implements CloneablePowerInter
         this.source = source;
 
         type = PowerType.DEBUFF;
-        isTurnBased = true  ;
+        isTurnBased = true;
 
         // We load those textures here.
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
@@ -66,7 +66,7 @@ public class LeechSeedPower extends AbstractPower implements CloneablePowerInter
         return barColor;
     }
 
-    public void atEndOfTurn(boolean isPlayer) {
+    public void atStartOfTurn() {
         int heal = this.amount / 2;
         if (this.owner.currentHealth < this.amount)
             heal = this.owner.currentHealth / 2;
@@ -74,10 +74,15 @@ public class LeechSeedPower extends AbstractPower implements CloneablePowerInter
        this.addToBot(new HealAction(AbstractDungeon.player, this.owner, heal));
     }
 
+
+
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0];
+        int heal = this.amount / 2;
+        if (this.owner.currentHealth < this.amount)
+            heal = this.owner.currentHealth / 2;
+        description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 
     @Override

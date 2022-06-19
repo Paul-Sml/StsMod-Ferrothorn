@@ -24,7 +24,7 @@
   },
   "ferrothorn:BulletSeed": {
     "NAME": "Bullet Seed",
-    "DESCRIPTION": "Randomly add from !M! to 5 ferrothorn:Seeds into your hand."
+    "DESCRIPTION": "Randomly add from !M! to 5 *Seeds into your hand."
   },
   "ferrothorn:Seed": {
     "NAME": "Seed",
@@ -77,8 +77,8 @@
   },
   "ferrothorn:SeedBomb": {
     "NAME": "Seed Bomb",
-    "DESCRIPTION": "Add a ferrothorn:Seed+ to your hand and double its damage.",
-    "UPGRADE_DESCRIPTION": "Add a ferrothorn:Seed+ to your hand. NL Double the damage NL of ALL Seed cards in your hand."
+    "DESCRIPTION": "Add a *Seed+ to your hand and double its damage.",
+    "UPGRADE_DESCRIPTION": "Add a *Seed+ to your hand. NL Double the damage NL of ALL Seed cards in your hand."
   },
   "ferrothorn:Substitute": {
     "NAME": "Substitute",
@@ -110,7 +110,9 @@
     "EXTENDED_DESCRIPTION": [
       "Deal !D! damage twice. NL Effect varies with ferrothorn:Weather.",
       "Deal !D! damage. NL Apply !M! Weak. NL Effect varies with ferrothorn:Weather.",
-      "Deal !D! damage. NL Apply !M! Vulnerable. NL Effect varies with ferrothorn:Weather."
+      "Deal !D! damage. NL Apply !M! Vulnerable. NL Effect varies with ferrothorn:Weather.",
+      "Weather effects",
+      "#ySandstorm: deal damage twice. NL #yRain: Apply #yWeak. NL #yHarsh #ySunlight: Apply #yVulnerable."
     ]
   },
   "ferrothorn:HeavySlam": {
@@ -122,7 +124,7 @@
     "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each Relic you have."
   },
   "ferrothorn:ShoreUp": {
-    "NAME": "ShoreUp",
+    "NAME": "Shore Up",
     "DESCRIPTION": "Gain !M! Plated Armor. NL In ferrothorn:Sandstorm gain additional Plated Armor equal to your Dexterity."
   },
   "ferrothorn:SolarBeam": {
@@ -193,7 +195,7 @@
   },
   "ferrothorn:WorrySeed": {
     "NAME": "Worry Seed",
-    "DESCRIPTION": "Add !M! ferrothorn:Seeds into your hand. NL Then transform ALL Seed cards in your hand into *Insomnia."
+    "DESCRIPTION": "Add !M! *Seeds into your hand. NL Then transform ALL Seed cards in your hand into *Insomnia."
   },
   "ferrothorn:Insomnia": {
     "NAME": "Insomnia",
@@ -206,7 +208,7 @@
   },
   "ferrothorn:AcidSpray": {
     "NAME": "Acid Spray",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! ferrothorn:Stamina."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain ferrothorn:Stamina equal to unblocked damage dealt."
   },
   "ferrothorn:Confide": {
     "NAME": "Confide",
@@ -330,7 +332,7 @@
   },
   "ferrothorn:Flatter": {
     "NAME": "Flatter",
-    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Strength to the enemy."
+    "DESCRIPTION": "Gain !B! Block. NL Give !M! Strength to the enemy."
   },
   "ferrothorn:GrassyTerrain": {
     "NAME": "Grassy Terrain",
@@ -352,7 +354,9 @@
       "Gain 4 ferrothorn:Scales. NL ",
       "Gain 3 ferrothorn:Toxic_Spikes. NL ",
       "Gain 2 Thorns. NL ",
-      "Whenever you are attacked, draw 1 card. NL "
+      "Whenever you are attacked, draw 1 card. NL ",
+      "Weather effects",
+      "No #yWeather: Whenever you are attacked, draw 1 card. NL #ySandstorm: #yScales. NL #yRain: #yToxic #ySpikes. NL #yHarsh #ySunlight: #yThorns."
     ]
   },
   "ferrothorn:AfterYou": {
@@ -372,5 +376,26 @@
     "NAME": "Magnet Rise",
     "DESCRIPTION": "Gain [E] for each enemy in combat. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain [E] . NL Gain [E] for each enemy in combat. NL Exhaust."
+  },
+  "ferrothorn:Growth": {
+    "NAME": "Growth",
+    "DESCRIPTION": "Activate exiting effects of your current ferrothorn:Weather twice. if you are not in a ferrothorn:Weather, enter a random one."
+  },
+  "ferrothorn:Autotomize": {
+    "NAME": "Autotomize",
+    "DESCRIPTION": "Draw !B! cards. NL Affected by Block modifiers.",
+    "EXTENDED_DESCRIPTION": ["Draw !B! card. NL Affected by Block modifiers."]
+  },
+  "ferrothorn:FellStinger": {
+    "NAME": "Fell Stinger",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy dies, add a copy of this to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If the enemy dies, add a copy of this to your hand that costs 0. NL Exhaust."
+  },
+  "ferrothorn:Encore": {
+    "NAME": "Encore",
+    "DESCRIPTION": "If the enemy intends to attack, set it's base damage to !M! this turn. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "The enemy doesn't intend to attack."
+    ]
   }
 }

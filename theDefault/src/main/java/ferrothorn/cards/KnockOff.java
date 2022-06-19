@@ -62,7 +62,7 @@ public class KnockOff extends AbstractDynamicCard {
     @Override
     public void upgrade() {
         if (!upgraded) {
-            upgradeMagicNumber(1);
+            upgradeMagicNumber(2);
             upgradeDamage(1);
             upgradeName();
         }

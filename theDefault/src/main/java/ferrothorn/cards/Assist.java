@@ -26,7 +26,7 @@ public class Assist extends AbstractDynamicCard {
 
     public Assist() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.baseBlock = 9;
+        this.baseBlock = 8;
     }
 
     // Actions the card should do.

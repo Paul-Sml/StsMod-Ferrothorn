@@ -1,6 +1,7 @@
 package ferrothorn.characters;
 
 import basemod.abstracts.CustomPlayer;
+import basemod.animations.SpineAnimation;
 import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -8,6 +9,7 @@ import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.purple.EmptyFist;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -82,11 +84,29 @@ public class Ferrothorn extends CustomPlayer {
 
     // =============== /BASE STATS/ =================
 
-    private boolean isEvolved;
-    
     public void evolvePokemons() {
-        //if (AbstractDungeon.actNum > 1)
-            //reloadAnimation();
+        if (AbstractDungeon.actNum > 1)
+            reloadAnimation(true);
+    }
+
+    public void reloadAnimation(boolean isEvolved) {
+        System.out.println("-");
+        logger.info("FERROTHORN | Evolved : " + isEvolved +"  Shiny : " + isShiny);
+        loadAnimation(
+                "ferrothornResources/images/char/defaultCharacter/Ferrothorn.atlas",
+                "ferrothornResources/images/char/defaultCharacter/Ferrothorn.json",
+                1.0f);
+        AnimationState.TrackEntry e = state.setAnimation(0, "Idle1", true);
+        if (isShiny){
+            e = state.setAnimation(0, "Idle2", true);
+        }
+//        AbstractDungeon.actionManager.addToBottom(new WaitAction(1.0F));
+        if (isEvolved){
+            e = state.setAnimation(0, "Idle3", true);
+            if (isShiny){
+                e = state.setAnimation(0, "Idle4", true);
+            }
+        }
     }
 
     // =============== STRINGS =================
@@ -102,7 +122,8 @@ public class Ferrothorn extends CustomPlayer {
     // =============== TEXTURES OF BIG ENERGY ORB ===============
 
     public static final String[] orbTextures = {
-            "ferrothornResources/images/char/defaultCharacter/orb/orb.png",/*
+            "ferrothornResources/images/char/defaultCharacter/orb/orb.png",
+            /*
             "ferrothornResources/images/char/defaultCharacter/orb/layer1.png",
             "ferrothornResources/images/char/defaultCharacter/orb/layer2.png",
             "ferrothornResources/images/char/defaultCharacter/orb/layer3.png",
@@ -113,7 +134,8 @@ public class Ferrothorn extends CustomPlayer {
             "ferrothornResources/images/char/defaultCharacter/orb/layer2d.png",
             "ferrothornResources/images/char/defaultCharacter/orb/layer3d.png",
             "ferrothornResources/images/char/defaultCharacter/orb/layer4d.png",
-            "ferrothornResources/images/char/defaultCharacter/orb/layer5d.png",*/};
+            "ferrothornResources/images/char/defaultCharacter/orb/layer5d.png",
+            */};
 
     // =============== /TEXTURES OF BIG ENERGY ORB/ ===============
 
@@ -122,8 +144,9 @@ public class Ferrothorn extends CustomPlayer {
     public Ferrothorn(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures,
                 "ferrothornResources/images/char/defaultCharacter/orb/vfx.png", null,
-                new SpriterAnimation(
-                        "ferrothornResources/images/char/defaultCharacter/Spriter/theDefaultAnimation.scml"));
+                new SpineAnimation("ferrothornResources/images/char/defaultCharacter/Ferrothorn.atlas","ferrothornResources/images/char/defaultCharacter/Ferrothorn.json",1.0f));
+
+        reloadAnimation(false);
 
 
         // =============== TEXTURES, ENERGY, LOADOUT =================  
@@ -140,12 +163,12 @@ public class Ferrothorn extends CustomPlayer {
 
         // =============== ANIMATIONS =================  
 
-        loadAnimation(
+        /*loadAnimation(
                 THE_DEFAULT_SKELETON_ATLAS,
                 THE_DEFAULT_SKELETON_JSON,
                 1.0f);
         AnimationState.TrackEntry e = state.setAnimation(0, "animation", true);
-        e.setTime(e.getEndTime() * MathUtils.random());
+        e.setTime(e.getEndTime() * MathUtils.random());*/
 
         // =============== /ANIMATIONS/ =================
 
@@ -185,9 +208,10 @@ public class Ferrothorn extends CustomPlayer {
         retVal.add(Defend.ID);
         retVal.add(Defend.ID);
         retVal.add(Defend.ID);
-        retVal.add(Defend.ID);
+        //retVal.add(Defend.ID);
 
         retVal.add(LeechSeed.ID);
+        retVal.add(Growth.ID);
 
         return retVal;
     }
@@ -252,7 +276,7 @@ public class Ferrothorn extends CustomPlayer {
     //Which card should be obtainable from the Match and Keep event?
     @Override
     public AbstractCard getStartCardForEvent() {
-        return new Strike();
+        return new LeechSeed();
     }
 
     // The class name as it appears next to your player name in-game

@@ -40,7 +40,7 @@ public class Scales extends AbstractPower implements CloneablePowerInterface {
         this.source = source;
 
         type = PowerType.BUFF;
-        isTurnBased = true  ;
+        isTurnBased = false;
 
         this.clearAttackedList();
 

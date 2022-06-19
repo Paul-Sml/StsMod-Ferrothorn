@@ -155,8 +155,8 @@ public class FerrothornMod implements
     public static final String BADGE_IMAGE = "ferrothornResources/images/Badge.png";
     
     // Atlas and JSON files for the Animations
-    public static final String THE_DEFAULT_SKELETON_ATLAS = "ferrothornResources/images/char/defaultCharacter/skeleton.atlas";
-    public static final String THE_DEFAULT_SKELETON_JSON = "ferrothornResources/images/char/defaultCharacter/skeleton.json";
+    public static final String THE_DEFAULT_SKELETON_ATLAS = "ferrothornResources/images/char/defaultCharacter/Ferrothorn.atlas";
+    public static final String THE_DEFAULT_SKELETON_JSON = "ferrothornResources/images/char/defaultCharacter/Ferrothorn.json";
     
     // =============== MAKE IMAGE PATHS =================
     
@@ -440,6 +440,12 @@ public class FerrothornMod implements
         BaseMod.addCard(new Strike());
         BaseMod.addCard(new Defend());
         BaseMod.addCard(new LeechSeed());
+        BaseMod.addCard(new Growth());
+        UnlockTracker.unlockCard(Strike.ID);
+        UnlockTracker.unlockCard(Defend.ID);
+        UnlockTracker.unlockCard(LeechSeed.ID);
+        UnlockTracker.unlockCard(Growth.ID);
+
 
         BaseMod.addCard(new AncientPower());
         UnlockTracker.unlockCard(AncientPower.ID);
@@ -455,8 +461,8 @@ public class FerrothornMod implements
         UnlockTracker.unlockCard(Endure.ID);
         BaseMod.addCard(new Explosion());
         UnlockTracker.unlockCard(Explosion.ID);
-        BaseMod.addCard(new GrassKnot());
-        UnlockTracker.unlockCard(GrassKnot.ID);
+//        BaseMod.addCard(new GrassKnot());
+//        UnlockTracker.unlockCard(GrassKnot.ID);
         BaseMod.addCard(new GyroBall());
         UnlockTracker.unlockCard(GyroBall.ID);
         BaseMod.addCard(new Harden());
@@ -553,8 +559,8 @@ public class FerrothornMod implements
         UnlockTracker.unlockCard(ShiftGear.ID);
         BaseMod.addCard(new FollowMe());
         UnlockTracker.unlockCard(FollowMe.ID);
-        BaseMod.addCard(new PoisonSting());
-        UnlockTracker.unlockCard(PoisonSting.ID);
+//        BaseMod.addCard(new PoisonSting());
+//        UnlockTracker.unlockCard(PoisonSting.ID);
         BaseMod.addCard(new StickyWeb());
         UnlockTracker.unlockCard(StickyWeb.ID);
         BaseMod.addCard(new DiamondStorm());
@@ -607,9 +613,12 @@ public class FerrothornMod implements
         UnlockTracker.unlockCard(MorningSun.ID);
         BaseMod.addCard(new AfterYou());
         UnlockTracker.unlockCard(AfterYou.ID);
-
-
-        logger.info("Done adding cards!");
+        BaseMod.addCard(new Autotomize());
+        UnlockTracker.unlockCard(Autotomize.ID);
+        BaseMod.addCard(new FellStinger());
+        UnlockTracker.unlockCard(FellStinger.ID);
+//        BaseMod.addCard(new Encore());
+//        UnlockTracker.unlockCard(Encore.ID);
     }
 
 
@@ -701,6 +710,8 @@ public class FerrothornMod implements
 
     @Override
     public void receiveStartGame() {
-        isShiny = MathUtils.random(1,4096) == 1;
+        isShiny = false;
+//        isShiny = MathUtils.random(1,2) == 1;
+        //isShiny = MathUtils.random(1,4096) == 1;
     }
 }

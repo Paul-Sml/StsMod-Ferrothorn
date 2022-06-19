@@ -1,0 +1,34 @@
+
+Ferrothorn.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Ferroseed_shiny
+  rotate: false
+  xy: 755, 1
+  size: 250, 250
+  orig: 250, 250
+  offset: 0, 0
+  index: -1
+Ferroseed
+  rotate: false
+  xy: 755, 253
+  size: 250, 250
+  orig: 250, 250
+  offset: 0, 0
+  index: -1
+Ferrothorn_shiny
+  rotate: false
+  xy: 378, 1
+  size: 375, 375
+  orig: 375, 375
+  offset: 0, 0
+  index: -1
+Ferrothorn
+  rotate: false
+  xy: 1, 1
+  size: 375, 375
+  orig: 375, 375
+  offset: 0, 0
+  index: -1

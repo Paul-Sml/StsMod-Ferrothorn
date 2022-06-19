@@ -29,6 +29,7 @@ public class StrengthSap extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 2;
+        this.tags.add(CardTags.HEALING);
     }
 
     // Actions the card should do.

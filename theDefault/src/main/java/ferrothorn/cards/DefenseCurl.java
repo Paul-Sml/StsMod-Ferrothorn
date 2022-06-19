@@ -31,6 +31,7 @@ public class DefenseCurl extends AbstractDynamicCard {
     public DefenseCurl() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.magicNumber = this.baseMagicNumber = 2;
+        this.tags.add(CardTags.HEALING);
     }
 
     // Actions the card should do.

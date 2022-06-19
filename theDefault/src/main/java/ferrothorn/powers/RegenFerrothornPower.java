@@ -33,7 +33,7 @@ public class RegenFerrothornPower extends AbstractPower implements CloneablePowe
         this.source = source;
 
         type = PowerType.BUFF;
-        isTurnBased = true  ;
+        isTurnBased = false;
 
         //loadRegion(CurlUpPower.POWER_ID);
         loadRegion("regen");

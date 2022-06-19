@@ -30,7 +30,7 @@ public class RagePowder extends AbstractDynamicCard {
 
     public RagePowder() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.baseBlock = 23;
+        this.baseBlock = 25;
     }
 
     // Actions the card should do.

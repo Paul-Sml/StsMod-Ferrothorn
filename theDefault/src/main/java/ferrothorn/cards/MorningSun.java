@@ -1,5 +1,6 @@
 package ferrothorn.cards;
 
+import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -20,6 +21,9 @@ import ferrothorn.powers.ToxicSpikesPower;
 import ferrothorn.stances.HarshSunlight;
 import ferrothorn.stances.Rain;
 import ferrothorn.stances.Sandstorm;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static ferrothorn.FerrothornMod.makeCardPath;
@@ -95,6 +99,12 @@ public class MorningSun extends AbstractDynamicCard {
         }
     }
 
+    @Override
+    public List<TooltipInfo> getCustomTooltips() {
+        ArrayList<TooltipInfo> thing = new ArrayList<TooltipInfo>();
+        thing.add(new TooltipInfo(cardStrings.EXTENDED_DESCRIPTION[4], cardStrings.EXTENDED_DESCRIPTION[5]));
+        return thing;
+    }
 
     @Override
     public void upgrade() {

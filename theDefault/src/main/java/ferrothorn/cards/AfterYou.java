@@ -28,7 +28,7 @@ public class AfterYou extends AbstractDynamicCard {
 
     public AfterYou() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.baseBlock = 9;
+        this.baseBlock = 11;
         this.magicNumber = this.baseMagicNumber = 1;
     }
 

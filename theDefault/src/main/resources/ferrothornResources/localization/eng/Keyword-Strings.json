@@ -45,7 +45,7 @@
       "leech seed",
       "leech_seed"
     ],
-    "DESCRIPTION": "The target loses HP at the end of each turn. Heal for half of the damage done."
+    "DESCRIPTION": "The target loses HP at the end of each turn. NL Heal for half of the damage done."
   },
   {
     "NAMES": [

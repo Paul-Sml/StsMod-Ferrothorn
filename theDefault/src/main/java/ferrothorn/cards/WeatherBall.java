@@ -1,5 +1,6 @@
 package ferrothorn.cards;
 
+import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -19,6 +20,9 @@ import ferrothorn.stances.HarshSunlight;
 import ferrothorn.stances.Rain;
 import ferrothorn.stances.Sandstorm;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static com.megacrit.cardcrawl.core.CardCrawlGame.sound;
 import static ferrothorn.FerrothornMod.makeCardPath;
@@ -27,6 +31,7 @@ public class WeatherBall extends AbstractDynamicCard {
 
     public static final String ID = FerrothornMod.makeID(WeatherBall.class.getSimpleName());
     public static final String IMG = makeCardPath("WeatherBall.png");
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
@@ -71,24 +76,30 @@ public class WeatherBall extends AbstractDynamicCard {
         AbstractPlayer p = AbstractDungeon.player;
         if (p != null && p.stance != null && (p.stance.ID.equals(Sandstorm.STANCE_ID) || p.stance.ID.equals(Rain.STANCE_ID) || p.stance.ID.equals(HarshSunlight.STANCE_ID))) {
             if (p.stance.ID.equals(Sandstorm.STANCE_ID)) {//Sandstorm
-                this.rawDescription = CardCrawlGame.languagePack.getCardStrings(ID).EXTENDED_DESCRIPTION[0];
+                this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[0];
                 initializeDescription();
             }
             else if (p.stance.ID.equals(Rain.STANCE_ID)) {//Rain
-                this.rawDescription = CardCrawlGame.languagePack.getCardStrings(ID).EXTENDED_DESCRIPTION[1];
+                this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[1];
                 initializeDescription();
             }
             else {//Harsh Sunlight
-                this.rawDescription = CardCrawlGame.languagePack.getCardStrings(ID).EXTENDED_DESCRIPTION[2];
+                this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[2];
                 initializeDescription();
             }
 
         } else {//No Weather
-            this.rawDescription = CardCrawlGame.languagePack.getCardStrings(ID).DESCRIPTION;
+            this.rawDescription = cardStrings.DESCRIPTION;
             initializeDescription();
         }
     }
 
+    @Override
+    public List<TooltipInfo> getCustomTooltips() {
+        ArrayList<TooltipInfo> thing = new ArrayList<TooltipInfo>();
+        thing.add(new TooltipInfo(cardStrings.EXTENDED_DESCRIPTION[3], cardStrings.EXTENDED_DESCRIPTION[4]));
+        return thing;
+    }
 
     @Override
     public void upgrade() {

@@ -34,6 +34,7 @@ public class Ingrain extends AbstractDynamicCard {
         this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 3;
         this.isInnate = true;
+        this.tags.add(CardTags.HEALING);
     }
 
     // Actions the card should do.
