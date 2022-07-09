@@ -2,6 +2,7 @@ package ferrothorn.cards;
 
 import com.evacipated.cardcrawl.mod.stslib.variables.ExhaustiveVariable;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ThornsPower;
@@ -35,6 +36,7 @@ public class ToxicSpikes extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new ApplyPowerAction(p, p, new ToxicSpikesPower(p, p, this.magicNumber), this.magicNumber));
+        this.addToBot(new DrawCardAction(1));
     }
 
     @Override

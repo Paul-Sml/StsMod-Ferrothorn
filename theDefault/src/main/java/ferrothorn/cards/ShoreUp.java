@@ -1,6 +1,7 @@
 package ferrothorn.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -10,8 +11,11 @@ import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import ferrothorn.FerrothornMod;
 import ferrothorn.characters.Ferrothorn;
+import ferrothorn.stances.HarshSunlight;
+import ferrothorn.stances.Rain;
 import ferrothorn.stances.Sandstorm;
 
+import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static ferrothorn.FerrothornMod.makeCardPath;
 
 public class ShoreUp extends AbstractDynamicCard {
@@ -34,7 +38,7 @@ public class ShoreUp extends AbstractDynamicCard {
 
     public ShoreUp() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = 3;
+        this.magicNumber = this.baseMagicNumber = 4;
 
     }
 
@@ -43,18 +47,33 @@ public class ShoreUp extends AbstractDynamicCard {
         /*if (p.stance.ID.equals(Sandstorm.STANCE_ID) && p.hasPower(DexterityPower.POWER_ID))
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PlatedArmorPower(p, this.magicNumber + p.getPower(DexterityPower.POWER_ID).amount), this.magicNumber + p.getPower(DexterityPower.POWER_ID).amount));
         else*/
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PlatedArmorPower(p, this.magicNumber), this.magicNumber));
+        if (this.upgraded && p.stance.ID.equals(Sandstorm.STANCE_ID))
+            this.addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber), this.magicNumber));
+        else
+            this.addToBot(new ApplyPowerAction(p, p, new PlatedArmorPower(p, this.magicNumber), this.magicNumber));
+
+    }
+
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+
+        AbstractPlayer p = AbstractDungeon.player;
+        if (p.stance.ID.equals(Sandstorm.STANCE_ID))
+            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
 
     }
 
     @Override
     public void applyPowers() {
-        this.magicNumber = this.baseMagicNumber;
-        AbstractPlayer p = AbstractDungeon.player;
-        if (p.stance.ID.equals(Sandstorm.STANCE_ID) && p.hasPower(DexterityPower.POWER_ID)) {
-            this.magicNumber += p.getPower(DexterityPower.POWER_ID).amount;
-            super.applyPowers();
-            this.isMagicNumberModified = this.isMagicNumberModified || (baseMagicNumber != magicNumber);
+        if (!this.upgraded) {
+            this.magicNumber = this.baseMagicNumber;
+            AbstractPlayer p = AbstractDungeon.player;
+            if (p.stance.ID.equals(Sandstorm.STANCE_ID) && p.hasPower(DexterityPower.POWER_ID)) {
+                this.magicNumber += p.getPower(DexterityPower.POWER_ID).amount;
+                super.applyPowers();
+                this.isMagicNumberModified = this.isMagicNumberModified || (baseMagicNumber != magicNumber);
+            } else
+                super.applyPowers();
         } else
             super.applyPowers();
     }
@@ -63,8 +82,8 @@ public class ShoreUp extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            //upgradeBlock(UPGRADE_PLUS_BLOCK);
-            upgradeMagicNumber(1);
+            this.rawDescription = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

@@ -45,7 +45,7 @@ public class RainEffect extends AbstractGameEffect {
         this.scale = MathUtils.random(0.05F, 0.25F);
         this.vX *= this.scale;
         this.scale *= Settings.scale;
-        this.color = new Color(CardHelper.getColor(9,MathUtils.random(81,101),MathUtils.random(117,180)));
+        this.color = new Color(CardHelper.getColor(9,MathUtils.random(81,101),MathUtils.random(117,180))).cpy();
         Vector2 derp = new Vector2(this.vX, this.vY);
         this.rotation = derp.angle() - 05.0F + (float) frostCount / 3.0F;
 

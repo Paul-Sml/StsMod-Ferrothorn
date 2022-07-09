@@ -29,7 +29,7 @@ public class Swagger extends AbstractDynamicCard {
     public Swagger() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.exhaust = true;
-        this.magicNumber = this.baseMagicNumber = 2;
+        this.magicNumber = this.baseMagicNumber = 3;
     }
 
     // Actions the card should do.

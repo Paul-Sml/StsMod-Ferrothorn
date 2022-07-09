@@ -5,8 +5,11 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -67,22 +70,18 @@ public class LeechSeedPower extends AbstractPower implements CloneablePowerInter
     }
 
     public void atStartOfTurn() {
-        int heal = this.amount / 2;
-        if (this.owner.currentHealth < this.amount)
-            heal = this.owner.currentHealth / 2;
+        this.flash();
        this.addToBot(new LoseHPAction(this.owner, AbstractDungeon.player, this.amount));
-       this.addToBot(new HealAction(AbstractDungeon.player, this.owner, heal));
     }
 
-
+    public void onDeath() {
+        this.addToBot(new HealAction(AbstractDungeon.player, this.owner, this.amount));
+    }
 
     // Update the description when you apply this power. (i.e. add or remove an "s" in keyword(s))
     @Override
     public void updateDescription() {
-        int heal = this.amount / 2;
-        if (this.owner.currentHealth < this.amount)
-            heal = this.owner.currentHealth / 2;
-        description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
     }
 
     @Override

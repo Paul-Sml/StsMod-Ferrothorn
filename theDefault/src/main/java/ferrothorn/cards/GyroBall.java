@@ -22,11 +22,11 @@ public class GyroBall extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = Ferrothorn.Enums.COLOR_FERROTHORN;
 
-    private static final int COST = 1;
+    private static final int COST = 2;
 
     public GyroBall() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage = 5;
+        this.baseDamage = 14;
         this.magicNumber = this.baseMagicNumber = 1;
     }
 
@@ -57,7 +57,7 @@ public class GyroBall extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(3);
+            upgradeMagicNumber(1);
         }
     }
 }

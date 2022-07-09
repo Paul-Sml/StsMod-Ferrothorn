@@ -33,8 +33,8 @@ public class RareCandy extends CustomRelic {
 
     public void onEquip() {
         AbstractDungeon.player.increaseMaxHp(HP_AMT, false);
-        AbstractDungeon.getCurrRoom().addCardToRewards();
-        AbstractDungeon.combatRewardScreen.open(this.DESCRIPTIONS[1]);
+        //AbstractDungeon.getCurrRoom().addCardToRewards();
+        AbstractDungeon.combatRewardScreen.open(this.DESCRIPTIONS[2]);
         AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.0F;
     }
 

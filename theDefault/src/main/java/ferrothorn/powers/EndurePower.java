@@ -11,10 +11,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.BufferPower;
-import com.megacrit.cardcrawl.powers.CurlUpPower;
-import com.megacrit.cardcrawl.powers.EntanglePower;
+import com.megacrit.cardcrawl.powers.*;
 import ferrothorn.FerrothornMod;
 import ferrothorn.util.TextureLoader;
 
@@ -60,6 +57,7 @@ public class EndurePower extends AbstractPower implements CloneablePowerInterfac
         if (damageAmount < this.owner.currentHealth && damageAmount > 0) {
             this.flash();
             this.addToTop(new GainBlockAction(this.owner, this.owner, this.amount));
+            this.addToBot(new ApplyPowerAction(this.owner, this.owner, new BlurPower(this.owner, 1), 1));
             this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         }
         return super.onLoseHp(damageAmount);

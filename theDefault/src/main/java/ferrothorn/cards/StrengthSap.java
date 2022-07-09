@@ -36,7 +36,7 @@ public class StrengthSap extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractPower pow = m.getPower(StrengthPower.POWER_ID);
-        if (pow != null)
+        if (pow != null && pow.amount > 0)
             this.addToBot(new HealAction(p, p, pow.amount));
         this.addToBot(new ApplyPowerAction(m, p, new StrengthPower(m, -this.magicNumber), -this.magicNumber));
     }

@@ -20,7 +20,8 @@
     "FLAVOR": "",
     "DESCRIPTIONS": [
       "Upon pickup, raise your Max HP by #b",
-      " and chose #b1 card to add to your deck."
+      " and chose #b1 card to add to your deck.",
+      "Chose a card to add to your deck."
     ]
   },
   "ferrothorn:DrySkin": {
@@ -36,14 +37,14 @@
     "NAME": "Sand Veil",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "While in #yferrothorn:Sandstorm, apply #b1 #yWeak to EVERYONE at the end of your turn."
+      "While in #yferrothorn:Sandstorm lose #b"," #yStrength but you apply #b1 #yWeak to ALL enemies at the end of your turn."
     ]
   },
   "ferrothorn:SolarPower": {
     "NAME": "Solar Power",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "While in #yferrothorn:Harsh_Sunlight, your #yAttacks deal #b",
+      "While in #yferrothorn:Harsh_Sunlight your #yAttacks deal #b",
       " additional damage, but while in #yHarsh #ySunlight you also lose #b",
       " HP at the end of your turn"
     ]
@@ -55,6 +56,20 @@
       "When you deal #b",
       " unblocked damage, draw #b",
       " card."
+    ]
+  },
+  "ferrothorn:Defeatist": {
+    "NAME": "Defeatist",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "If your HP is above #b50%, gain [E] at the start of your turn."
+    ]
+  },
+  "ferrothorn:Drizzle": {
+    "NAME": "Drizzle",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "#yWeather spawns on every Non-Boss combat."
     ]
   }
 }

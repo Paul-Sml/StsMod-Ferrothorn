@@ -24,7 +24,7 @@
   },
   "ferrothorn:BulletSeed": {
     "NAME": "Bullet Seed",
-    "DESCRIPTION": "Randomly add from !M! to 5 *Seeds into your hand."
+    "DESCRIPTION": "Randomly add !M! to 5 *Seeds into your hand."
   },
   "ferrothorn:Seed": {
     "NAME": "Seed",
@@ -33,11 +33,11 @@
   "ferrothorn:Curse": {
     "NAME": "Curse",
     "DESCRIPTION": "Gain !M! Strength. NL Gain !M! Dexterity. NL Shuffle a Wound into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Strength. NL Gain !M! Dexterity. NL Shuffle a Wound into your discard pile."
+    "UPGRADE_DESCRIPTION": "Gain !M! Strength. NL Gain !M! Dexterity. NL Shuffle a Slimed into your discard pile."
   },
   "ferrothorn:Endure": {
     "NAME": "Endure",
-    "DESCRIPTION": "The first time you lose HP, gain !B! Block."
+    "DESCRIPTION": "The first time you lose HP, gain !B! Block NL  and 1 Blur. NL Exhaust."
   },
   "ferrothorn:Explosion": {
     "NAME": "Explosion",
@@ -86,7 +86,7 @@
   },
   "ferrothorn:Swagger": {
     "NAME": "Swagger",
-    "DESCRIPTION": "Apply !M! Strength to the enemy to stun him. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Strength to the enemy to Stun him. NL Exhaust."
   },
   "ferrothorn:SwordDance": {
     "NAME": "Sword Dance",
@@ -117,7 +117,7 @@
   },
   "ferrothorn:HeavySlam": {
     "NAME": "Heavy Slam",
-    "DESCRIPTION": "Deal !D! damage. NL Deals additional damage equal to your Max HP exceeding 100."
+    "DESCRIPTION": "Deal !D! damage. NL Deals additional damage equal to your Max HP exceeding 100. If Fatal gain !M! Max HP."
   },
   "ferrothorn:GyroBall": {
     "NAME": "Gyro Ball",
@@ -125,7 +125,8 @@
   },
   "ferrothorn:ShoreUp": {
     "NAME": "Shore Up",
-    "DESCRIPTION": "Gain !M! Plated Armor. NL In ferrothorn:Sandstorm gain additional Plated Armor equal to your Dexterity."
+    "DESCRIPTION": "Gain !M! Plated Armor. NL In ferrothorn:Sandstorm gain additional Plated Armor equal to your Dexterity.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Plated Armor. NL In ferrothorn:Sandstorm gain as much Dexterity instead."
   },
   "ferrothorn:SolarBeam": {
     "NAME": "Solar Beam",
@@ -146,7 +147,7 @@
   },
   "ferrothorn:GrassKnot": {
     "NAME": "Grass Knot",
-    "DESCRIPTION": "Deal !D! damage. NL Repeat for each thousand Max HP of the enemy."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Repeat for each enemy with more HP than you."
   },
   "ferrothorn:Spikes": {
     "NAME": "Spikes",
@@ -167,11 +168,11 @@
   },
   "ferrothorn:ToxicSpikes": {
     "NAME": "Toxic Spikes",
-    "DESCRIPTION": "Gain !M! ferrothorn:Toxic_Spikes. NL Exhaustive !stslib:ex!."
+    "DESCRIPTION": "Gain !M! ferrothorn:Toxic_Spikes. NL Draw 1 card. NL Exhaustive !stslib:ex!."
   },
   "ferrothorn:Toxic": {
     "NAME": "Toxic",
-    "DESCRIPTION": "Apply !M! Poison."
+    "DESCRIPTION": "Apply !M! Poison. NL Increase this card's Poison by !ferrothorn:SecondMagic! this combat."
   },
   "ferrothorn:RockPolish": {
     "NAME": "Rock Polish",
@@ -199,8 +200,8 @@
   },
   "ferrothorn:Insomnia": {
     "NAME": "Insomnia",
-    "DESCRIPTION": "Draw !M! card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Exhaust."
+    "DESCRIPTION": "Draw !M! card. NL Gain !B! Block. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL Gain !B! Block. NL Exhaust."
   },
   "ferrothorn:DoubleTeam": {
     "NAME": "Double Team",
@@ -275,7 +276,7 @@
   },
   "ferrothorn:BanefulBunker": {
     "NAME": "Baneful Bunker",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! ferrothorn:Toxic_Spikes."
+    "DESCRIPTION": "Gain !B! Block. NL  Gain !M! ferrothorn:Toxic_Spikes."
   },
   "ferrothorn:Superpower": {
     "NAME": "Superpower",
@@ -291,7 +292,7 @@
   },
   "ferrothorn:Payback": {
     "NAME": "Payback",
-    "DESCRIPTION": "Deal !D! damage. NL If this card is in your hand at the end of your turn, increase its damage by !M! this combat."
+    "DESCRIPTION": "Deal !D! damage. NL If this is in your hand at the end of your turn, increase its damage by !M! this combat."
   },
   "ferrothorn:ShellTrap": {
     "NAME": "Shell Trap",
@@ -348,14 +349,14 @@
   },
   "ferrothorn:MorningSun": {
     "NAME": "Morning Sun",
-    "DESCRIPTION": "Gain hazards varying with ferrothorn:Weather. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain hazards varying with ferrothorn:Weather.",
+    "DESCRIPTION": "Gain *Hazards varying with ferrothorn:Weather. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain *Hazards varying with ferrothorn:Weather.",
     "EXTENDED_DESCRIPTION": [
       "Gain 4 ferrothorn:Scales. NL ",
-      "Gain 3 ferrothorn:Toxic_Spikes. NL ",
-      "Gain 2 Thorns. NL ",
+      "Gain 2 ferrothorn:Toxic_Spikes. NL ",
+      "Gain 3 Thorns. NL ",
       "Whenever you are attacked, draw 1 card. NL ",
-      "Weather effects",
+      "Hazards depending on Weather",
       "No #yWeather: Whenever you are attacked, draw 1 card. NL #ySandstorm: #yScales. NL #yRain: #yToxic #ySpikes. NL #yHarsh #ySunlight: #yThorns."
     ]
   },
@@ -365,7 +366,8 @@
   },
   "ferrothorn:Defog": {
     "NAME": "Defog",
-    "DESCRIPTION": "Exit your ferrothorn:Weather. NL Remove Strength on EVERYONE. NL Exhaust."
+    "DESCRIPTION": "Exit your ferrothorn:Weather. NL Remove Strength on EVERYONE. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Remove Artifact and Strength on ALL enemies. NL Exhaust."
   },
   "ferrothorn:HelpingHand": {
     "NAME": "Helping Hand",
@@ -374,12 +376,13 @@
   },
   "ferrothorn:MagnetRise": {
     "NAME": "Magnet Rise",
-    "DESCRIPTION": "Gain [E] for each enemy in combat. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain [E] . NL Gain [E] for each enemy in combat. NL Exhaust."
+    "DESCRIPTION": "Gain [E] for each enemy in combat. NL Draw 1 card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain [E] . NL Gain [E] for each enemy in combat. NL Draw 1 card. NL Exhaust."
   },
   "ferrothorn:Growth": {
     "NAME": "Growth",
-    "DESCRIPTION": "Activate exiting effects of your current ferrothorn:Weather twice. if you are not in a ferrothorn:Weather, enter a random one."
+    "DESCRIPTION": "Activate exiting effects of your current ferrothorn:Weather twice. if you are not in a ferrothorn:Weather, enter a random one.",
+    "UPGRADE_DESCRIPTION": "Activate exiting effects of your current ferrothorn:Weather twice. if you are not in a ferrothorn:Weather, choose one to enter."
   },
   "ferrothorn:Autotomize": {
     "NAME": "Autotomize",
@@ -388,14 +391,32 @@
   },
   "ferrothorn:FellStinger": {
     "NAME": "Fell Stinger",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy dies, add a copy of this to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If the enemy dies, add a copy of this to your hand that costs 0. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL If this kills an enemy, add a copy of this to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If this kills an enemy, add a copy of this to your hand that costs 0. NL Exhaust."
   },
   "ferrothorn:Encore": {
     "NAME": "Encore",
-    "DESCRIPTION": "If the enemy intends to attack, set it's base damage to !M! this turn. NL Exhaust.",
+    "DESCRIPTION": "Repeat the effects of the last card you played. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Repeat the effects of the last card you played.",
     "EXTENDED_DESCRIPTION": [
-      "The enemy doesn't intend to attack."
+      "Repeat the effects of the last card you played. NL #yExhausts on use.",
+      "Repeat the effects of the last card you played."
     ]
+  },
+  "ferrothorn:Spotlight": {
+    "NAME": "Spotlight",
+    "DESCRIPTION": "At the start of your turn, a random enemy instantly attacks you for 0 damage."
+  },
+  "ferrothorn:HeadCharge": {
+    "NAME": "Head Charge",
+    "DESCRIPTION": "Deal !D! damage. NL The enemy instantly attacks you for !M! damage."
+  },
+  "ferrothorn:SnapTrap": {
+    "NAME": "Snap Trap",
+    "DESCRIPTION": "Gain !B! Block. NL Draw !M! cards. NL Apply !M! ferrothorn:Leech_Seed. NL Exhaust."
+  },
+  "ferrothorn:Counter": {
+    "NAME": "Counter",
+    "DESCRIPTION": "Whenever an attack you receive is fully blocked, deal that much damage back to the attacker."
   }
 }

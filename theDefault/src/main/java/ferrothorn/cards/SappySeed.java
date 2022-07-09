@@ -26,20 +26,21 @@ public class SappySeed extends AbstractDynamicCard {
     public static final CardColor COLOR = Ferrothorn.Enums.COLOR_FERROTHORN;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 8;
+    private static final int DAMAGE = 9;
 
     public SappySeed() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = DAMAGE;
         this.magicNumber = this.baseMagicNumber = 1;
         this.tags.add(FerrothornMod.SEED);
+        this.tags.add(CardTags.HEALING);
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         this.addToBot(new ApplyPowerAction(m, p, new LeechSeedPower(m, p, this.magicNumber), this.magicNumber));
+        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
     }
 
     //Upgraded stats.
@@ -47,6 +48,7 @@ public class SappySeed extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeDamage(1);
             upgradeMagicNumber(1);
         }
     }

@@ -1,7 +1,7 @@
 {
         "ferrothorn:LeechSeedPower": {
                 "NAME": "Leech Seed",
-                "DESCRIPTIONS": ["The target loses #b"," HP at the end of each turn. NL Heal for half of the damage done."]
+                "DESCRIPTIONS": ["The target loses #b"," HP at the end of each turn. NL On death, Heal #b"," HP."]
         },
         "ferrothorn:Scales": {
                 "NAME": "Scales",
@@ -33,10 +33,18 @@
         },
         "ferrothorn:EndurePower": {
                 "NAME": "Endure",
-                "DESCRIPTIONS": ["After receiving unblocked #yAttack damage, gain #b"," Block."]
+                "DESCRIPTIONS": ["After losing HP, gain #b"," Block."]
         },
         "ferrothorn:RegenFerrothornPower": {
                 "NAME": "Regen",
                 "DESCRIPTIONS": ["At the end of your turn, heal #b"," #yHP, then reduce #yRegen by #b1."]
+        },
+        "ferrothorn:SpotlightPower": {
+                "NAME": "Spotlight",
+                "DESCRIPTIONS": ["At the start of your turn, a random enemy instantly attacks you for #b0 damage","."," twice."," #b"," times."]
+        },
+        "ferrothorn:CounterPower": {
+                "NAME": "Counter",
+                "DESCRIPTIONS": ["Whenever an attack you receive is fully blocked, deal ","that much back to the attacker","#b"," times "]
         }
 }

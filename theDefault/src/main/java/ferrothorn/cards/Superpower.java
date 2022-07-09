@@ -28,8 +28,7 @@ public class Superpower extends AbstractDynamicCard {
 
     public Superpower() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.exhaust = true;
-        this.baseDamage = 14;
+        this.baseDamage = 19;
         this.magicNumber = this.baseMagicNumber = 1;
     }
 
@@ -43,7 +42,7 @@ public class Superpower extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(4);
+            upgradeDamage(5);
         }
     }
 }

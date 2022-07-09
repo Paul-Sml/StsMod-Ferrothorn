@@ -23,7 +23,7 @@ public class Endure extends AbstractDynamicCard {
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON; //  Up to you, I like auto-complete on these
     private static final CardTarget TARGET = CardTarget.SELF;  //   since they don't change much.
-    private static final CardType TYPE = CardType.POWER;  //
+    private static final CardType TYPE = CardType.SKILL;  //
     public static final CardColor COLOR = Ferrothorn.Enums.COLOR_FERROTHORN;
 
     private static final int COST = 1;
@@ -31,7 +31,8 @@ public class Endure extends AbstractDynamicCard {
 
     public Endure() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.baseBlock = 11;
+        this.baseBlock = 10;
+        this.exhaust = true;
     }
 
     // Actions the card should do.

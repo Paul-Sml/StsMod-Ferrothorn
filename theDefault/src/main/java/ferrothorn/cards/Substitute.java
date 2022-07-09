@@ -35,7 +35,7 @@ public class Substitute extends AbstractDynamicCard {
     public Substitute() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.exhaust = true;
-        this.magicNumber = this.baseMagicNumber = 8;
+        this.magicNumber = this.baseMagicNumber = 7;
         this.isInnate = false;
     }
 

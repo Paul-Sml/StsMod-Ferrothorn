@@ -33,7 +33,7 @@ public class BodyPress extends AbstractDynamicCard {
 
     public BodyPress() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.baseBlock = 8;
+        this.baseBlock = 9;
     }
 
     @Override

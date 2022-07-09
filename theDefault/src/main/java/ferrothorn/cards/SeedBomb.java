@@ -37,7 +37,8 @@ public class SeedBomb extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractCard card = this.cardsToPreview;
+        AbstractCard card = this.cardsToPreview.makeCopy();
+        card.upgrade();
         if (!this.upgraded)
             card.baseDamage *= this.magicNumber;
 

@@ -43,7 +43,7 @@ public class AfterYou extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(3);
+            upgradeBlock(4);
         }
     }
 }

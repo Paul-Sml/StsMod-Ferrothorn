@@ -33,8 +33,7 @@ public class HyperBeam extends AbstractDynamicCard {
 
     public HyperBeam() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.exhaust = true;
-        this.baseDamage = 26;
+        this.baseDamage = 27;
     }
 
     @Override

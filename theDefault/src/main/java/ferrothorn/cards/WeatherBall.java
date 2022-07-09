@@ -4,6 +4,7 @@ import basemod.helpers.TooltipInfo;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -62,6 +63,15 @@ public class WeatherBall extends AbstractDynamicCard {
 
     }
 
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+
+        AbstractPlayer p = AbstractDungeon.player;
+        if (p.stance.ID.equals(Sandstorm.STANCE_ID) || p.stance.ID.equals(Rain.STANCE_ID) || p.stance.ID.equals(HarshSunlight.STANCE_ID))
+            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+
+    }
+
     @Override
     public void triggerWhenDrawn() {
         this.updateStuff();
@@ -99,6 +109,12 @@ public class WeatherBall extends AbstractDynamicCard {
         ArrayList<TooltipInfo> thing = new ArrayList<TooltipInfo>();
         thing.add(new TooltipInfo(cardStrings.EXTENDED_DESCRIPTION[3], cardStrings.EXTENDED_DESCRIPTION[4]));
         return thing;
+    }
+
+    @Override
+    public void applyPowers() {
+        updateStuff();
+        super.applyPowers();
     }
 
     @Override

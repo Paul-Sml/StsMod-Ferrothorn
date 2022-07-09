@@ -32,7 +32,7 @@ public class Ingrain extends AbstractDynamicCard {
     public Ingrain() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.exhaust = true;
-        this.magicNumber = this.baseMagicNumber = 3;
+        this.magicNumber = this.baseMagicNumber = 4;
         this.isInnate = true;
         this.tags.add(CardTags.HEALING);
     }

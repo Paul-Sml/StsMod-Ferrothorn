@@ -100,6 +100,12 @@ public class MorningSun extends AbstractDynamicCard {
     }
 
     @Override
+    public void applyPowers() {
+        updateStuff();
+        super.applyPowers();
+    }
+
+    @Override
     public List<TooltipInfo> getCustomTooltips() {
         ArrayList<TooltipInfo> thing = new ArrayList<TooltipInfo>();
         thing.add(new TooltipInfo(cardStrings.EXTENDED_DESCRIPTION[4], cardStrings.EXTENDED_DESCRIPTION[5]));

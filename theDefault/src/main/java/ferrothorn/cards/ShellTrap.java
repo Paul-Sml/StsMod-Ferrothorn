@@ -27,7 +27,7 @@ public class ShellTrap extends AbstractDynamicCard {
 
     public ShellTrap() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.baseBlock = 4;
+        this.baseBlock = 6;
         this.magicNumber = this.baseMagicNumber = 3;
     }
 

@@ -16,13 +16,13 @@
     "NAMES": [
       "sandstorm"
     ],
-    "DESCRIPTION": "At the end of your turn, deal #b3 damage to ALL enemies. NL Upon exiting this #yWeather, gain #b1 #yPlated #yArmor."
+    "DESCRIPTION": "At the end of your turn, deal #b4 damage to ALL enemies. NL Upon exiting this #yWeather, gain #b1 #yMetallicize."
   },
   {
     "NAMES": [
       "rain"
     ],
-    "DESCRIPTION": "Reduce by #b15% received #yAttack damage. NL Upon exiting this #yWeather, add a #ySeed+ to your hand."
+    "DESCRIPTION": "Reduce received #yAttack damage by #b20%. NL Upon exiting this #yWeather, add a #ySeed+ to your hand."
   },
   {
     "PROPER_NAME": "Harsh Sunlight",
@@ -45,7 +45,7 @@
       "leech seed",
       "leech_seed"
     ],
-    "DESCRIPTION": "The target loses HP at the end of each turn. NL Heal for half of the damage done."
+    "DESCRIPTION": "The enemy loses HP at the end of each turn. NL When the enemy dies, heal HP."
   },
   {
     "NAMES": [

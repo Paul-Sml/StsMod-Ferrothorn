@@ -19,7 +19,7 @@ public class HarshSunlightEffect extends AbstractGameEffect {
     private static TextureAtlas.AtlasRegion img;
     private boolean playedSfx = false;
     float RotationMod;
-    private Color color2;
+    //private Color color2;
     public HarshSunlightEffect() {
         if (img == null) {
             img = ImageMaster.vfxAtlas.findRegion("combat/laserThick");
@@ -30,7 +30,7 @@ public class HarshSunlightEffect extends AbstractGameEffect {
         this.x *= Settings.scale;
         this.y *= Settings.scale;
         color = new Color(CardHelper.getColor(MathUtils.random(230,255),MathUtils.random(187,195),MathUtils.random(12,20))).cpy();
-        color2 = new Color(CardHelper.getColor(MathUtils.random(240,255),MathUtils.random(207,215),MathUtils.random(80,105))).cpy();
+        //color2 = new Color(CardHelper.getColor(MathUtils.random(240,255),MathUtils.random(207,215),MathUtils.random(80,105))).cpy();
         color.a = 0.0f;
         this.duration = 5.0f;
         this.startingDuration = 5.0F;

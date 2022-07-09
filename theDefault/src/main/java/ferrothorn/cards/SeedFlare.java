@@ -26,7 +26,7 @@ public class SeedFlare extends AbstractDynamicCard {
     public static final CardColor COLOR = Ferrothorn.Enums.COLOR_FERROTHORN;
 
     private static final int COST = 2;
-    private static final int DAMAGE = 11;
+    private static final int DAMAGE = 12;
 
     public SeedFlare() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);

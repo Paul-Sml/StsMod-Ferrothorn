@@ -1,6 +1,7 @@
 package ferrothorn.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -45,6 +46,8 @@ public class MagnetRise extends AbstractDynamicCard {
 
         if (amt > 0)
             this.addToBot(new GainEnergyAction(amt));
+
+        this.addToBot(new DrawCardAction(1));
     }
 
     @Override

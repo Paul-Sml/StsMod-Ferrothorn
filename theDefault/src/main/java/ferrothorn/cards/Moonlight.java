@@ -23,7 +23,7 @@ public class Moonlight extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;  //
     public static final CardColor COLOR = Ferrothorn.Enums.COLOR_FERROTHORN;
 
-    private static final int COST = 1;
+    private static final int COST = 0;
 
     public Moonlight() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -41,6 +41,9 @@ public class Moonlight extends AbstractDynamicCard {
         ss.cost = -2;
         rd.cost = -2;
         sd.cost = -2;
+        ss.magicNumber = -2;
+        rd.magicNumber = -2;
+        sd.magicNumber = -2;
         stanceChoices.add(ss);
         stanceChoices.add(rd);
         stanceChoices.add(sd);

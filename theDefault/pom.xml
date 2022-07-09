@@ -6,7 +6,7 @@
     <groupId>ferrothorn</groupId>
     <artifactId>ferrothorn</artifactId>
     <name>Ferrothorn</name>
-    <version>0.1</version>
+    <version>0.9</version>
     <description><![CDATA[A fan mod inspired by the Pokemon Ferrothorn.]]></description>
 
     <properties>

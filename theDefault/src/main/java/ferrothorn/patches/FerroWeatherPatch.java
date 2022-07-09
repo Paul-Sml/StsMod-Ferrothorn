@@ -9,6 +9,7 @@ import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.Hitbox;
+import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.map.MapRoomNode;
 import com.megacrit.cardcrawl.screens.DungeonMapScreen;
 import com.megacrit.cardcrawl.vfx.FlameAnimationEffect;
@@ -41,9 +42,9 @@ public class FerroWeatherPatch {
 
                 sb.setColor(Color.WHITE);
                 if (!Settings.isMobile) {
-                    sb.draw(weatherImage, (float)__instance.x * spacingX + offsetX - 48.0F + __instance.offsetX + imgWidth * scale, (float)__instance.y * Settings.MAP_DST_Y + offsetY + DungeonMapScreen.offsetY - 64.0F + __instance.offsetY, 64.0F, 64.0F, 128.0F, 128.0F, scale * Settings.scale, scale * Settings.scale, 0.0F, 0, 0, 128, 128, false, false);
+                    sb.draw(weatherImage, (float)__instance.x * spacingX + offsetX - 32.0F + __instance.offsetX + imgWidth * scale, (float)__instance.y * Settings.MAP_DST_Y + offsetY + DungeonMapScreen.offsetY - 64.0F + __instance.offsetY, 64.0F, 64.0F, 128.0F, 128.0F, scale * Settings.scale, scale * Settings.scale, 0.0F, 0, 0, 128, 128, false, false);
                 } else {
-                    sb.draw(weatherImage, (float)__instance.x * spacingX + offsetX - 48.0F + __instance.offsetX + imgWidth * scale, (float)__instance.y * Settings.MAP_DST_Y + offsetY + DungeonMapScreen.offsetY - 64.0F + __instance.offsetY, 64.0F, 64.0F, 128.0F, 128.0F, scale * Settings.scale * 2.0F, scale * Settings.scale * 2.0F, 0.0F, 0, 0, 128, 128, false, false);
+                    sb.draw(weatherImage, (float)__instance.x * spacingX + offsetX - 32.0F + __instance.offsetX + imgWidth * scale, (float)__instance.y * Settings.MAP_DST_Y + offsetY + DungeonMapScreen.offsetY - 64.0F + __instance.offsetY, 64.0F, 64.0F, 128.0F, 128.0F, scale * Settings.scale * 2.0F, scale * Settings.scale * 2.0F, 0.0F, 0, 0, 128, 128, false, false);
                 }
 
                 //exp10In interpolation with input range from 0.0 to 0.5 results in output range from 0.0 to 0.12
@@ -61,15 +62,22 @@ public class FerroWeatherPatch {
                 float alpha = p * ALPHA_RANGE;
                 sb.setColor(new Color(1.0F, 1.0F, 1.0F, alpha));
                 if (!Settings.isMobile) {
-                    sb.draw(weatherImage, (float)__instance.x * spacingX + offsetX - 48.0F + __instance.offsetX + imgWidth * scale, (float)__instance.y * Settings.MAP_DST_Y + offsetY + DungeonMapScreen.offsetY - 64.0F + __instance.offsetY, 64.0F, 64.0F, 128.0F, 128.0F, scale * Settings.scale + tmp, scale * Settings.scale + tmp, 0.0F, 0, 0, 128, 128, false, false);
-                    sb.draw(weatherImage, (float)__instance.x * spacingX + offsetX - 48.0F + __instance.offsetX + imgWidth * scale, (float)__instance.y * Settings.MAP_DST_Y + offsetY + DungeonMapScreen.offsetY - 64.0F + __instance.offsetY, 64.0F, 64.0F, 128.0F, 128.0F, scale * Settings.scale + tmp * 0.66F, scale * Settings.scale + tmp * 0.66F, 0.0F, 0, 0, 128, 128, false, false);
-                    sb.draw(weatherImage, (float)__instance.x * spacingX + offsetX - 48.0F + __instance.offsetX + imgWidth * scale, (float)__instance.y * Settings.MAP_DST_Y + offsetY + DungeonMapScreen.offsetY - 64.0F + __instance.offsetY, 64.0F, 64.0F, 128.0F, 128.0F, scale * Settings.scale + tmp * 0.33F, scale * Settings.scale + tmp * 0.33F, 0.0F, 0, 0, 128, 128, false, false);
+                    sb.draw(weatherImage, (float)__instance.x * spacingX + offsetX - 32.0F + __instance.offsetX + imgWidth * scale, (float)__instance.y * Settings.MAP_DST_Y + offsetY + DungeonMapScreen.offsetY - 64.0F + __instance.offsetY, 64.0F, 64.0F, 128.0F, 128.0F, scale * Settings.scale + tmp, scale * Settings.scale + tmp, 0.0F, 0, 0, 128, 128, false, false);
+                    sb.draw(weatherImage, (float)__instance.x * spacingX + offsetX - 32.0F + __instance.offsetX + imgWidth * scale, (float)__instance.y * Settings.MAP_DST_Y + offsetY + DungeonMapScreen.offsetY - 64.0F + __instance.offsetY, 64.0F, 64.0F, 128.0F, 128.0F, scale * Settings.scale + tmp * 0.66F, scale * Settings.scale + tmp * 0.66F, 0.0F, 0, 0, 128, 128, false, false);
+                    sb.draw(weatherImage, (float)__instance.x * spacingX + offsetX - 32.0F + __instance.offsetX + imgWidth * scale, (float)__instance.y * Settings.MAP_DST_Y + offsetY + DungeonMapScreen.offsetY - 64.0F + __instance.offsetY, 64.0F, 64.0F, 128.0F, 128.0F, scale * Settings.scale + tmp * 0.33F, scale * Settings.scale + tmp * 0.33F, 0.0F, 0, 0, 128, 128, false, false);
                 } else {
-                    sb.draw(weatherImage, (float)__instance.x * spacingX + offsetX - 48.0F + __instance.offsetX + imgWidth * scale, (float)__instance.y * Settings.MAP_DST_Y + offsetY + DungeonMapScreen.offsetY - 64.0F + __instance.offsetY, 64.0F, 64.0F, 128.0F, 128.0F, scale * Settings.scale * 2.0F + tmp, scale * Settings.scale * 2.0F + tmp, 0.0F, 0, 0, 128, 128, false, false);
-                    sb.draw(weatherImage, (float)__instance.x * spacingX + offsetX - 48.0F + __instance.offsetX + imgWidth * scale, (float)__instance.y * Settings.MAP_DST_Y + offsetY + DungeonMapScreen.offsetY - 64.0F + __instance.offsetY, 64.0F, 64.0F, 128.0F, 128.0F, scale * Settings.scale * 2.0F + tmp * 0.66F, scale * Settings.scale * 2.0F + tmp * 0.66F, 0.0F, 0, 0, 128, 128, false, false);
-                    sb.draw(weatherImage, (float)__instance.x * spacingX + offsetX - 48.0F + __instance.offsetX + imgWidth * scale, (float)__instance.y * Settings.MAP_DST_Y + offsetY + DungeonMapScreen.offsetY - 64.0F + __instance.offsetY, 64.0F, 64.0F, 128.0F, 128.0F, scale * Settings.scale * 2.0F + tmp * 0.33F, scale * Settings.scale * 2.0F + tmp * 0.33F, 0.0F, 0, 0, 128, 128, false, false);
+                    sb.draw(weatherImage, (float)__instance.x * spacingX + offsetX - 32.0F + __instance.offsetX + imgWidth * scale, (float)__instance.y * Settings.MAP_DST_Y + offsetY + DungeonMapScreen.offsetY - 64.0F + __instance.offsetY, 64.0F, 64.0F, 128.0F, 128.0F, scale * Settings.scale * 2.0F + tmp, scale * Settings.scale * 2.0F + tmp, 0.0F, 0, 0, 128, 128, false, false);
+                    sb.draw(weatherImage, (float)__instance.x * spacingX + offsetX - 32.0F + __instance.offsetX + imgWidth * scale, (float)__instance.y * Settings.MAP_DST_Y + offsetY + DungeonMapScreen.offsetY - 64.0F + __instance.offsetY, 64.0F, 64.0F, 128.0F, 128.0F, scale * Settings.scale * 2.0F + tmp * 0.66F, scale * Settings.scale * 2.0F + tmp * 0.66F, 0.0F, 0, 0, 128, 128, false, false);
+                    sb.draw(weatherImage, (float)__instance.x * spacingX + offsetX - 32.0F + __instance.offsetX + imgWidth * scale, (float)__instance.y * Settings.MAP_DST_Y + offsetY + DungeonMapScreen.offsetY - 64.0F + __instance.offsetY, 64.0F, 64.0F, 128.0F, 128.0F, scale * Settings.scale * 2.0F + tmp * 0.33F, scale * Settings.scale * 2.0F + tmp * 0.33F, 0.0F, 0, 0, 128, 128, false, false);
                 }
                 sb.setBlendFunction(770, 771);
+
+                if (__instance.hb.hovered) {
+                    String title = getWeatherText(weather);
+                    String text = getWeatherTitle(weather);
+                    TipHelper.renderGenericTip(__instance.hb.cX + __instance.hb.width / 2.0f + weatherImage.getWidth() / 4.0f, __instance.y * Settings.MAP_DST_Y + offsetY + DungeonMapScreen.offsetY + __instance.offsetY + weatherImage.getWidth() / 4.0f, title, text);
+                }
+
             }
         }
 
@@ -78,6 +86,24 @@ public class FerroWeatherPatch {
                 case Rain: return RAIN;
                 case Sandstorm: return SAND;
                 case Sun: return SUN;
+                default: throw new RuntimeException("Unrecognized weather type: " + weather);
+            }
+        }
+
+        private static String getWeatherTitle(Ferrothorn.WeatherType weather) {
+            switch (weather) {
+                case Rain: return "Enter the combat in #yRain.";
+                case Sandstorm: return "Enter the combat in #ySandstorm.";
+                case Sun: return "Enter the combat in #yHarsh #ySunlight.";
+                default: throw new RuntimeException("Unrecognized weather type: " + weather);
+            }
+        }
+
+        private static String getWeatherText(Ferrothorn.WeatherType weather) {
+            switch (weather) {
+                case Rain: return "Rain";
+                case Sandstorm: return "Sandstorm";
+                case Sun: return "Harsh Sunlight";
                 default: throw new RuntimeException("Unrecognized weather type: " + weather);
             }
         }

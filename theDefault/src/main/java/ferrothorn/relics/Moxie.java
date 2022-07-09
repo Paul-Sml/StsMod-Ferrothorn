@@ -27,7 +27,7 @@ public class Moxie extends CustomRelic {
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("Moxie.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Moxie.png"));
 
-    private static final int DMG_AMT = 14;
+    private static final int DMG_AMT = 11;
     private static final int DRAW_AMT = 1;
 
     public Moxie() {
@@ -37,8 +37,10 @@ public class Moxie extends CustomRelic {
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
         super.onAttack(info, damageAmount, target);
-        if (damageAmount >= DMG_AMT)
+        if (damageAmount >= DMG_AMT) {
+            this.flash();
             this.addToBot(new DrawCardAction(DRAW_AMT));
+        }
     }
 
     @Override

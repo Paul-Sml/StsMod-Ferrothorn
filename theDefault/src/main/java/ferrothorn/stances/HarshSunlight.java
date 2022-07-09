@@ -87,10 +87,6 @@ public class HarshSunlight extends AbstractStance
         if (HarshSunlight.sfxId != -1L) {
             this.stopIdleSfx();
         }
-        CardCrawlGame.sound.play("POWER_DEXTERITY");
-        HarshSunlight.sfxId = CardCrawlGame.sound.playAndLoop("STANCE_LOOP_CALM");
-        AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.LIME, true));
-        AbstractDungeon.effectsQueue.add(new StanceChangeParticleGenerator(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, "Wrath"));
     }
 
     @Override
@@ -104,6 +100,7 @@ public class HarshSunlight extends AbstractStance
         this.stopIdleSfx();
         Sun.isDone = true;
     }
+
 
     @Override
     public void stopIdleSfx() {

@@ -33,7 +33,7 @@ public class TeeterDance extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (AbstractMonster q : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            if (!q.isDying && !q.isDead) {
+            if (!q.isDeadOrEscaped()) {
                 this.addToBot(new GainBlockAction(p, p, block));
             }
         }

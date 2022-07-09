@@ -4,6 +4,7 @@ import basemod.ReflectionHacks;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.red.SpotWeakness;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -82,6 +83,15 @@ public class RagePowder extends AbstractDynamicCard {
             }
         }
         return canUse;
+    }
+
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+
+        for (AbstractMonster q : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            if (q.getIntentBaseDmg() >= 0)
+                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        }
     }
 
     //Upgraded stats.

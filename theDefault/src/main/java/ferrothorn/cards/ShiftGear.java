@@ -45,15 +45,12 @@ public class ShiftGear extends AbstractDynamicCard {
     }
 
     @Override
-    public void applyPowers()
-    {
+    protected void applyPowersToBlock() {
         AbstractPower dexterity = AbstractDungeon.player.getPower(DexterityPower.POWER_ID);
         if (dexterity != null) {
             dexterity.amount *= magicNumber;
         }
-
-        super.applyPowers();
-
+        super.applyPowersToBlock();
         if (dexterity != null) {
             dexterity.amount /= magicNumber;
         }

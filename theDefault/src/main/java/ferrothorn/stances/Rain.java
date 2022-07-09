@@ -39,8 +39,8 @@ public class Rain extends AbstractStance
         this.name = stanceString.NAME;
         this.updateDescription();
         j = 25;
-        /*if (enablePlaceholder)
-            j = 100;*/
+        if (enablePlaceholder)
+            j = 40;
     }
 
     @Override
@@ -79,14 +79,10 @@ public class Rain extends AbstractStance
         if (Rain.sfxId != -1L) {
             this.stopIdleSfx();
         }
-        CardCrawlGame.sound.play("POWER_DEXTERITY");
-        Rain.sfxId = CardCrawlGame.sound.playAndLoop("STANCE_LOOP_CALM");
-        AbstractDungeon.effectsQueue.add(new BorderFlashEffect(Color.LIME, true));
-        AbstractDungeon.effectsQueue.add(new StanceChangeParticleGenerator(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, "Wrath"));
     }
 
     public float atDamageReceive(float damage, DamageInfo.DamageType type) {
-        return type == DamageInfo.DamageType.NORMAL ? damage * 0.85F : damage;
+        return type == DamageInfo.DamageType.NORMAL ? damage * 0.80F : damage;
     }
 
     @Override

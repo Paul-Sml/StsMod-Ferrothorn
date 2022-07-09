@@ -27,8 +27,8 @@ public class Payback extends AbstractDynamicCard {
 
     public Payback() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage = 7;
-        this.magicNumber = this.baseMagicNumber = 5;
+        this.baseDamage = 8;
+        this.magicNumber = this.baseMagicNumber = 6;
     }
 
     @Override
@@ -47,7 +47,7 @@ public class Payback extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(1);
+            upgradeDamage(2);
             upgradeMagicNumber(4);
         }
     }

@@ -44,10 +44,12 @@ public class Sandstorm extends AbstractDynamicCard {
 
     public void onChoseThisOption() {
         this.addToBot(new ChangeStanceAction(new ferrothorn.stances.Sandstorm()));
-        AbstractCard c = new Seed();
-        c.upgrade();
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, 1));
-        AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
+        if (this.magicNumber == -2) {
+            AbstractCard c = new Seed();
+            c.upgrade();
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, 1));
+            AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
+        }
     }
 
     //Upgraded stats.

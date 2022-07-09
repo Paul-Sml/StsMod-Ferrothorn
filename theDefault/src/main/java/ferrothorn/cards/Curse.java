@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.red.Barricade;
 import com.megacrit.cardcrawl.cards.red.WildStrike;
+import com.megacrit.cardcrawl.cards.status.Slimed;
 import com.megacrit.cardcrawl.cards.status.Wound;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -46,9 +47,9 @@ public class Curse extends AbstractDynamicCard {
         this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
         this.addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber), this.magicNumber));
         if (upgraded)
-            this.addToBot(new MakeTempCardInDiscardAction(new Wound(), 1));
+            this.addToBot(new MakeTempCardInDiscardAction(this.cardsToPreview, 1));
         else
-            this.addToBot(new MakeTempCardInDrawPileAction(new Wound(), 1, true, true));
+            this.addToBot(new MakeTempCardInDrawPileAction(this.cardsToPreview, 1, true, true));
     }
 
     //Upgraded stats.
@@ -57,6 +58,7 @@ public class Curse extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             //upgradeBaseCost(UPGRADED_COST);
+            this.cardsToPreview = new Slimed();
             this.rawDescription = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
             initializeDescription();
         }

@@ -28,7 +28,8 @@ public class Wish extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(p, p, new NextTurnBlockPower(p, p.currentBlock/2), p.currentBlock/2));
+        if (p.currentBlock/2 > 0)
+            this.addToBot(new ApplyPowerAction(p, p, new NextTurnBlockPower(p, p.currentBlock/2), p.currentBlock/2));
     }
 
     @Override

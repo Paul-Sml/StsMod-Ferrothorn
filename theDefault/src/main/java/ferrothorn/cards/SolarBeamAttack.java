@@ -27,7 +27,7 @@ public class SolarBeamAttack extends AbstractDynamicCard {
 
     private static final int COST = 0;
 
-    private static final int DAMAGE = 28;
+    private static final int DAMAGE = 30;
     private static final int UPGRADE_PLUS_DMG = 7;
 
     public SolarBeamAttack(){

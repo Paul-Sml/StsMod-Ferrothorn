@@ -14,6 +14,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import ferrothorn.FerrothornMod;
 import ferrothorn.characters.Ferrothorn;
 import ferrothorn.stances.HarshSunlight;
+import ferrothorn.stances.Rain;
+import ferrothorn.stances.Sandstorm;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static ferrothorn.FerrothornMod.makeCardPath;
@@ -41,6 +43,15 @@ public class SolarBeam extends AbstractDynamicCard {
             this.addToBot(new MakeTempCardInHandAction(this.cardsToPreview, 1));
         else
             this.addToBot(new MakeTempCardInDrawPileAction(this.cardsToPreview, 1, true, true));
+    }
+
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+
+        AbstractPlayer p = AbstractDungeon.player;
+        if (p.stance.ID.equals(HarshSunlight.STANCE_ID))
+            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+
     }
 
     @Override

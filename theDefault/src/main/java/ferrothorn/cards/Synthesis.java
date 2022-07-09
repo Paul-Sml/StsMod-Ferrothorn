@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.MetallicizePower;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
@@ -42,7 +43,7 @@ public class Synthesis extends AbstractDynamicCard {
         this.addToBot(new GainBlockAction(p, this.block));
 
         if (p.stance.ID.equals(Sandstorm.STANCE_ID))
-            this.addToBot(new ApplyPowerAction(p, p, new PlatedArmorPower(p, 1), 1));
+            this.addToBot(new ApplyPowerAction(p, p, new MetallicizePower(p, 1), 1));
 
         else if (p.stance.ID.equals(Rain.STANCE_ID)) {
             AbstractCard c = new Seed();
@@ -52,6 +53,15 @@ public class Synthesis extends AbstractDynamicCard {
 
         else if (p.stance.ID.equals(HarshSunlight.STANCE_ID))
             this.addToBot(new GainEnergyAction(1));
+
+    }
+
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+
+        AbstractPlayer p = AbstractDungeon.player;
+        if (p.stance.ID.equals(Sandstorm.STANCE_ID) || p.stance.ID.equals(Rain.STANCE_ID) || p.stance.ID.equals(HarshSunlight.STANCE_ID))
+            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
 
     }
 

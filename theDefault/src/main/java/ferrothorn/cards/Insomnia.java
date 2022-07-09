@@ -3,6 +3,7 @@ package ferrothorn.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -29,12 +30,14 @@ public class Insomnia extends AbstractDynamicCard {
         super(ID,IMG,COST,TYPE,COLOR,RARITY,TARGET);
         this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 1;
+        this.baseBlock = 1;
     }
 
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToBot(new GainBlockAction(p, this.block));
         this.addToBot(new DrawCardAction(this.magicNumber));
     }
 
@@ -44,6 +47,7 @@ public class Insomnia extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeBlock(1);
             upgradeMagicNumber(1);
             this.rawDescription = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
             initializeDescription();

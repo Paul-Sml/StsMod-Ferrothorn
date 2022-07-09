@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.powers.MetallicizePower;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import com.megacrit.cardcrawl.relics.MercuryHourglass;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
@@ -35,7 +36,7 @@ public class Sandstorm extends AbstractStance
         this.updateDescription();
         j = 50;
         if (enablePlaceholder)
-            j = 300;
+            j = 225;
     }
 
     @Override
@@ -64,13 +65,13 @@ public class Sandstorm extends AbstractStance
 
     @Override
     public void onEndOfTurn() {
-        AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction((AbstractCreature)null, DamageInfo.createDamageMatrix(3, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction((AbstractCreature)null, DamageInfo.createDamageMatrix(4, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
     }
 
     @Override
     public void onExitStance() {
         AbstractPlayer p = AbstractDungeon.player;
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PlatedArmorPower(p, 1), 1));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MetallicizePower(p, 1), 1));
         this.stopIdleSfx();
     }
 

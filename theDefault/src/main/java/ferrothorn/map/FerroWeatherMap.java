@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.rooms.MonsterRoom;
 import com.megacrit.cardcrawl.rooms.MonsterRoomElite;
 import ferrothorn.characters.Ferrothorn;
 import ferrothorn.patches.WeatherField;
+import ferrothorn.relics.Drizzle;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -33,6 +34,8 @@ public class FerroWeatherMap {
             }
 
             double percentCorrupt = 0.25;
+            if (AbstractDungeon.player.hasRelic(Drizzle.ID))
+                percentCorrupt = 1.0;
             int baseCorrupt = (int) Math.ceil(potentialWeatherNodes.size() * percentCorrupt);
 
             Collections.shuffle(potentialWeatherNodes, rng.random);

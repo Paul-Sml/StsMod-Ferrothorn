@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.cards.purple.Eruption;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.MetallicizePower;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import ferrothorn.FerrothornMod;
 import ferrothorn.characters.Ferrothorn;
@@ -44,11 +45,13 @@ public class SunnyDay extends AbstractDynamicCard {
 
     public void onChoseThisOption() {
         this.addToBot(new ChangeStanceAction(new ferrothorn.stances.HarshSunlight()));
-        AbstractPlayer p = AbstractDungeon.player;
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new PlatedArmorPower(p, 1), 1));
-        AbstractCard c = new Seed();
-        c.upgrade();
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, 1));
+        if (this.magicNumber == -2) {
+            AbstractPlayer p = AbstractDungeon.player;
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MetallicizePower(p, 1), 1));
+            AbstractCard c = new Seed();
+            c.upgrade();
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c, 1));
+        }
     }
 
     //Upgraded stats.

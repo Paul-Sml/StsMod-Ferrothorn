@@ -7,12 +7,14 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.ArtifactPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.stances.NeutralStance;
 import ferrothorn.FerrothornMod;
 import ferrothorn.characters.Ferrothorn;
 
+import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static ferrothorn.FerrothornMod.makeCardPath;
 
 public class Defog extends AbstractDynamicCard {
@@ -27,7 +29,7 @@ public class Defog extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;  //
     public static final CardColor COLOR = Ferrothorn.Enums.COLOR_FERROTHORN;
 
-    private static final int COST = 1;
+    private static final int COST = 0;
 
     public Defog() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -38,17 +40,25 @@ public class Defog extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ChangeStanceAction(NeutralStance.STANCE_ID));
+        if (!this.upgraded) {
+            this.addToBot(new ChangeStanceAction(NeutralStance.STANCE_ID));
 
-        AbstractPower powPlayer = p.getPower(StrengthPower.POWER_ID);
-        if (powPlayer != null)
-            this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, -powPlayer.amount), -powPlayer.amount));
+            AbstractPower powPlayer = p.getPower(StrengthPower.POWER_ID);
+            if (powPlayer != null)
+                this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, -powPlayer.amount), -powPlayer.amount));
+        }
 
         for (AbstractMonster q : AbstractDungeon.getCurrRoom().monsters.monsters) {
             if (!q.isDeadOrEscaped()) {
+                if (this.upgraded) {
+                    AbstractPower pow2 = q.getPower(ArtifactPower.POWER_ID);
+                    if (pow2 != null)
+                        this.addToBot(new ApplyPowerAction(q, p, new ArtifactPower(q, -pow2.amount), -pow2.amount));
+                }
                 AbstractPower pow = q.getPower(StrengthPower.POWER_ID);
                 if (pow != null)
                     this.addToBot(new ApplyPowerAction(q, p, new StrengthPower(q, -pow.amount), -pow.amount));
+
             }
         }
     }
@@ -58,7 +68,8 @@ public class Defog extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(0);
+            this.rawDescription = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

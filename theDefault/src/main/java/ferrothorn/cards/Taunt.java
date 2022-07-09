@@ -30,7 +30,7 @@ public class Taunt extends AbstractDynamicCard {
 
     public Taunt() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = 1;
+        this.magicNumber = this.baseMagicNumber = 2;
     }
 
     // Actions the card should do.
@@ -58,7 +58,7 @@ public class Taunt extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(-2);
+            upgradeMagicNumber(-1);
             this.rawDescription = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
             initializeDescription();
         }

@@ -336,7 +336,7 @@ public class FerrothornMod implements
         ModPanel settingsPanel = new ModPanel();
         
         // Create the on/off button:
-        ModLabeledToggleButton enableNormalsButton = new ModLabeledToggleButton("Enable skin based Boss relics (Z-Drive <skin>)",
+        ModLabeledToggleButton enableNormalsButton = new ModLabeledToggleButton("More Sandstorm and Rain particles, might cause lag.",
                 350.0f, 700.0f, Settings.CREAM_COLOR, FontHelper.charDescFont, // Position (trial and error it), color, font
                 enablePlaceholder, // Boolean it uses
                 settingsPanel, // The mod panel in which this button will be in
@@ -412,6 +412,10 @@ public class FerrothornMod implements
         UnlockTracker.markRelicAsSeen(SolarPower.ID);
         BaseMod.addRelicToCustomPool(new Moxie(), Ferrothorn.Enums.COLOR_FERROTHORN);
         UnlockTracker.markRelicAsSeen(Moxie.ID);
+        BaseMod.addRelicToCustomPool(new Defeatist(), Ferrothorn.Enums.COLOR_FERROTHORN);
+        UnlockTracker.markRelicAsSeen(Defeatist.ID);
+        BaseMod.addRelicToCustomPool(new Drizzle(), Ferrothorn.Enums.COLOR_FERROTHORN);
+        UnlockTracker.markRelicAsSeen(Drizzle.ID);
 
         logger.info("Done adding relics!");
     }
@@ -461,8 +465,8 @@ public class FerrothornMod implements
         UnlockTracker.unlockCard(Endure.ID);
         BaseMod.addCard(new Explosion());
         UnlockTracker.unlockCard(Explosion.ID);
-//        BaseMod.addCard(new GrassKnot());
-//        UnlockTracker.unlockCard(GrassKnot.ID);
+        BaseMod.addCard(new GrassKnot());
+        UnlockTracker.unlockCard(GrassKnot.ID);
         BaseMod.addCard(new GyroBall());
         UnlockTracker.unlockCard(GyroBall.ID);
         BaseMod.addCard(new Harden());
@@ -477,8 +481,8 @@ public class FerrothornMod implements
         UnlockTracker.unlockCard(IronDefense.ID);
         BaseMod.addCard(new IronHead());
         UnlockTracker.unlockCard(IronHead.ID);
-        BaseMod.addCard(new KnockOff());
-        UnlockTracker.unlockCard(KnockOff.ID);
+//        BaseMod.addCard(new KnockOff());
+//        UnlockTracker.unlockCard(KnockOff.ID);
         BaseMod.addCard(new PowerWhip());
         UnlockTracker.unlockCard(PowerWhip.ID);
         BaseMod.addCard(new Protect());
@@ -533,6 +537,8 @@ public class FerrothornMod implements
         UnlockTracker.unlockCard(WeatherBall.ID);
         BaseMod.addCard(new WorrySeed());
         UnlockTracker.unlockCard(WorrySeed.ID);
+        BaseMod.addCard(new Insomnia());
+        UnlockTracker.unlockCard(Insomnia.ID);
         BaseMod.addCard(new DoubleTeam());
         UnlockTracker.unlockCard(DoubleTeam.ID);
         BaseMod.addCard(new AcidSpray());
@@ -617,8 +623,16 @@ public class FerrothornMod implements
         UnlockTracker.unlockCard(Autotomize.ID);
         BaseMod.addCard(new FellStinger());
         UnlockTracker.unlockCard(FellStinger.ID);
-//        BaseMod.addCard(new Encore());
-//        UnlockTracker.unlockCard(Encore.ID);
+        BaseMod.addCard(new Encore());
+        UnlockTracker.unlockCard(Encore.ID);
+        BaseMod.addCard(new HeadCharge());
+        UnlockTracker.unlockCard(HeadCharge.ID);
+        BaseMod.addCard(new Spotlight());
+        UnlockTracker.unlockCard(Spotlight.ID);
+        BaseMod.addCard(new SnapTrap());
+        UnlockTracker.unlockCard(SnapTrap.ID);
+        BaseMod.addCard(new Counter());
+        UnlockTracker.unlockCard(Counter.ID);
     }
 
 

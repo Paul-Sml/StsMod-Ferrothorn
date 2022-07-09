@@ -2,6 +2,7 @@ package ferrothorn.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -43,6 +44,15 @@ public class Revenge extends AbstractDynamicCard {
             this.isDamageModified = this.isDamageModified || (baseDamage != damage);
         } else
             super.calculateCardDamage(mo);
+    }
+
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+
+        for (AbstractMonster q : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            if (q.getIntentBaseDmg() >= 0)
+                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        }
     }
 
     @Override

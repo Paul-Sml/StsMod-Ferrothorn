@@ -74,7 +74,7 @@ public class KingsShieldPower extends AbstractPower implements CloneablePowerInt
 
         if (info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != null && info.owner != this.owner) { // <---- HERE
             this.flash();
-            this.addToBot(new ApplyPowerAction(info.owner, this.owner, new WeakPower(info.owner, this.amount, false), this.amount));
+            this.addToTop(new ApplyPowerAction(info.owner, this.owner, new WeakPower(info.owner, this.amount, false), this.amount));
         }
 
         return damageAmount;

@@ -31,8 +31,9 @@ public class LeechSeed extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 2;
-        this.isInnate = false;
+//        this.isInnate = false;
         this.tags.add(FerrothornMod.SEED);
+        this.tags.add(CardTags.HEALING);
     }
 
     // Actions the card should do.
@@ -46,10 +47,11 @@ public class LeechSeed extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeMagicNumber(1);
             //upgradeBaseCost(UPGRADED_COST);
-            this.rawDescription = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
-            initializeDescription();
-            this.isInnate = true;
+//            this.rawDescription = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
+//            initializeDescription();
+//            this.isInnate = true;
         }
     }
 }

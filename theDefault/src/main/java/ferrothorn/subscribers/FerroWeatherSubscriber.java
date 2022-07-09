@@ -1,6 +1,7 @@
 package ferrothorn.subscribers;
 
 import basemod.interfaces.OnStartBattleSubscriber;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
@@ -18,6 +19,8 @@ public class FerroWeatherSubscriber implements OnStartBattleSubscriber {
         if (weather != null) {
             AbstractStance stance = getStance(weather);
             AbstractDungeon.actionManager.addToTop(new ChangeStanceAction(stance));
+            if (stance.ID.equals(HarshSunlight.STANCE_ID))
+                AbstractDungeon.actionManager.addToBottom(new DrawCardAction(1));
         }
     }
 
