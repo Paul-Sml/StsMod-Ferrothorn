@@ -34,7 +34,6 @@ public class WorrySeed extends AbstractDynamicCard {
 
     public WorrySeed() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 2;
         this.tags.add(FerrothornMod.SEED);
         this.cardsToPreview = new Insomnia();

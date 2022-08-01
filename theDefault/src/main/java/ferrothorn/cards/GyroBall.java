@@ -26,7 +26,7 @@ public class GyroBall extends AbstractDynamicCard {
 
     public GyroBall() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage = 14;
+        this.baseDamage = 13;
         this.magicNumber = this.baseMagicNumber = 1;
     }
 

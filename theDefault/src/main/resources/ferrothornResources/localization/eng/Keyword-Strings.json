@@ -60,5 +60,11 @@
       "toxic_spikes"
     ],
     "DESCRIPTION": "Whenever you are attacked, apply #yPoison back."
+  },
+  {
+    "NAMES": [
+      "grow"
+    ],
+    "DESCRIPTION": "Activate exiting effects of your current #yWeather without exiting it."
   }
 ]

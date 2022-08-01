@@ -38,7 +38,7 @@ public class Rain extends AbstractStance
         this.ID = STANCE_ID;
         this.name = stanceString.NAME;
         this.updateDescription();
-        j = 25;
+        j = 15;
         if (enablePlaceholder)
             j = 40;
     }

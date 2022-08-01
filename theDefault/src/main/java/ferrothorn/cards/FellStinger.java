@@ -26,7 +26,7 @@ public class FellStinger extends AbstractDynamicCard {
     public static final CardColor COLOR = Ferrothorn.Enums.COLOR_FERROTHORN;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 14;
+    private static final int DAMAGE = 13;
 
     public FellStinger() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);

@@ -217,7 +217,7 @@
   },
   "ferrothorn:Synthesis": {
     "NAME": "Synthesis",
-    "DESCRIPTION": "Gain !B! Block. NL Activate exiting effects of your current ferrothorn:Weather."
+    "DESCRIPTION": "Gain !B! Block. NL ferrothorn:Grow."
   },
   "ferrothorn:KingsShield": {
     "NAME": "King's Shield",
@@ -225,7 +225,7 @@
   },
   "ferrothorn:WideGuard": {
     "NAME": "Wide Guard",
-    "DESCRIPTION": "Gain !B! Block. NL Block is not removed at the start of your next turn.",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Blur.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Block is not removed at the start of your next !M! turns."
   },
   "ferrothorn:Stockpile": {
@@ -284,7 +284,7 @@
   },
   "ferrothorn:SeedFlare": {
     "NAME": "Seed Flare",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Apply extra Vulnerable for each Seed card in your hand."
   },
   "ferrothorn:DefenseCurl": {
     "NAME": "Defense Curl",
@@ -381,8 +381,8 @@
   },
   "ferrothorn:Growth": {
     "NAME": "Growth",
-    "DESCRIPTION": "Activate exiting effects of your current ferrothorn:Weather twice. if you are not in a ferrothorn:Weather, enter a random one.",
-    "UPGRADE_DESCRIPTION": "Activate exiting effects of your current ferrothorn:Weather twice. if you are not in a ferrothorn:Weather, choose one to enter."
+    "DESCRIPTION": "ferrothorn:Grow twice. NL If you are not in a ferrothorn:Weather, enter a random one.",
+    "UPGRADE_DESCRIPTION": "ferrothorn:Grow twice. NL If you are not in a ferrothorn:Weather, choose one to enter."
   },
   "ferrothorn:Autotomize": {
     "NAME": "Autotomize",
@@ -418,5 +418,9 @@
   "ferrothorn:Counter": {
     "NAME": "Counter",
     "DESCRIPTION": "Whenever an attack you receive is fully blocked, deal that much damage back to the attacker."
+  },
+  "ferrothorn:VenomDrench": {
+    "NAME": "Venom Drench",
+    "DESCRIPTION": "Gain !B! Block. NL If an enemy has Poison, NL Gain !M! ferrothorn:Stamina."
   }
 }

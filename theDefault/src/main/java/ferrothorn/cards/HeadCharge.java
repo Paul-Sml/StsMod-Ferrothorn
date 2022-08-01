@@ -25,7 +25,7 @@ public class HeadCharge extends AbstractDynamicCard {
 
     public HeadCharge() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage = 10;
+        this.baseDamage = 9;
         this.magicNumber = this.baseMagicNumber = 3;
     }
 

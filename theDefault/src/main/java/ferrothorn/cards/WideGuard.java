@@ -44,8 +44,8 @@ public class WideGuard extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(1);
-            this.rawDescription = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
-            initializeDescription();
+//            this.rawDescription = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
+//            initializeDescription();
         }
     }
 }

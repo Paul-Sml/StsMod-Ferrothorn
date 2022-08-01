@@ -32,7 +32,7 @@ public class HeavySlam extends AbstractDynamicCard {
 
     public HeavySlam() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage = 12;
+        this.baseDamage = 11;
         this.magicNumber = this.baseMagicNumber = 1;
     }
 

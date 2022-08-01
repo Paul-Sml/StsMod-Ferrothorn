@@ -575,8 +575,8 @@ public class FerrothornMod implements
 //        UnlockTracker.unlockCard(AcidArmor.ID);
         BaseMod.addCard(new BanefulBunker());
         UnlockTracker.unlockCard(BanefulBunker.ID);
-        BaseMod.addCard(new Superpower());
-        UnlockTracker.unlockCard(Superpower.ID);
+//        BaseMod.addCard(new Superpower());
+//        UnlockTracker.unlockCard(Superpower.ID);
         BaseMod.addCard(new SeedFlare());
         UnlockTracker.unlockCard(SeedFlare.ID);
         BaseMod.addCard(new DefenseCurl());
@@ -633,6 +633,8 @@ public class FerrothornMod implements
         UnlockTracker.unlockCard(SnapTrap.ID);
         BaseMod.addCard(new Counter());
         UnlockTracker.unlockCard(Counter.ID);
+        BaseMod.addCard(new VenomDrench());
+        UnlockTracker.unlockCard(VenomDrench.ID);
     }
 
 

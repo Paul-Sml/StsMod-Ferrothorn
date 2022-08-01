@@ -28,7 +28,7 @@ public class Superpower extends AbstractDynamicCard {
 
     public Superpower() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage = 19;
+        this.baseDamage = 18;
         this.magicNumber = this.baseMagicNumber = 1;
     }
 

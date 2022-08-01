@@ -26,7 +26,7 @@ public class SappySeed extends AbstractDynamicCard {
     public static final CardColor COLOR = Ferrothorn.Enums.COLOR_FERROTHORN;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 9;
+    private static final int DAMAGE = 8;
 
     public SappySeed() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
