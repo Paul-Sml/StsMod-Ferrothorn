@@ -41,7 +41,7 @@
         },
         "ferrothorn:SpotlightPower": {
                 "NAME": "Spotlight",
-                "DESCRIPTIONS": ["At the start of your turn, a random enemy instantly attacks you for #b0 damage","."," twice."," #b"," times."]
+                "DESCRIPTIONS": ["At the start of your turn, a random enemy immediately attacks you for #b0 damage","."," twice."," #b"," times."]
         },
         "ferrothorn:CounterPower": {
                 "NAME": "Counter",
