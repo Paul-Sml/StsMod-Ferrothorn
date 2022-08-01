@@ -4,7 +4,7 @@
       "scale",
       "scales"
     ],
-    "DESCRIPTION": "After receiving all #yAttacks from an enemy, deals damage back."
+    "DESCRIPTION": "Once an enemy's finished attacking, deals damage back."
   },
   {
     "NAMES": [
