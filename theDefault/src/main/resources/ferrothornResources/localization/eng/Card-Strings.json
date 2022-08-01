@@ -19,8 +19,8 @@
   },
   "ferrothorn:BodyPress": {
     "NAME": "Body Press",
-    "DESCRIPTION": "Deal !B! damage. NL Affected by Block modifiers instead of Damage modifiers.",
-    "UPGRADE_DESCRIPTION": "Deal !B! damage. NL Affected by Block modifiers instead of Damage modifiers. NL Ignores Frail."
+    "DESCRIPTION": "Deal !B! damage. NL Affected by Block modifiers instead of damage modifiers.",
+    "UPGRADE_DESCRIPTION": "Deal !B! damage. NL Affected by Block modifiers instead of damage modifiers. NL Ignores Frail."
   },
   "ferrothorn:BulletSeed": {
     "NAME": "Bullet Seed",
@@ -312,7 +312,7 @@
   },
   "ferrothorn:FoulPlay": {
     "NAME": "Foul Play",
-    "DESCRIPTION": "Deal !D! damage. NL Damage is calculated with the enemy's Buffs, instead of yours."
+    "DESCRIPTION": "Deal !D! damage. NL Damage is calculated with the enemy's powers, instead of yours."
   },
   "ferrothorn:AerialAce": {
     "NAME": "Aerial Ace",

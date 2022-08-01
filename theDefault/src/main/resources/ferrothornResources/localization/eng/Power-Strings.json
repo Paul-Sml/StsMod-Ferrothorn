@@ -5,7 +5,7 @@
         },
         "ferrothorn:Scales": {
                 "NAME": "Scales",
-                "DESCRIPTIONS": ["After receiving all #yAttacks from an enemy, deals #b"," damage back."]
+                "DESCRIPTIONS": ["Once an enemy's finished attacking, deals #b"," damage back."]
         },
         "ferrothorn:Stamina": {
                 "NAME": "Stamina",

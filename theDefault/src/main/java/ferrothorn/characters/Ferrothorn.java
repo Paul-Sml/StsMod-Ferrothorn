@@ -282,7 +282,7 @@ public class Ferrothorn extends CustomPlayer {
     // The class name as it appears next to your player name in-game
     @Override
     public String getTitle(AbstractPlayer.PlayerClass playerClass) {
-        return NAMES[1];
+        return NAMES[0];
     }
 
     // Should return a new instance of your character, sending name as its name parameter.
