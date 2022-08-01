@@ -2,7 +2,7 @@
   "ferrothorn:Resonance": {
     "TEXT": [
       "Resonance",
-      "When at 3 stacks draw two cards, deal damage equal to your Strength and gain 4 Block, can be activated only once per turn per enemy."
+      "At 3 stacks: deal damage equal to Strength, gain 4 block, and draw 2 cards. Can only be activated once per turn, per enemy."
     ]
   }
 }
