@@ -19,8 +19,8 @@
   },
   "ferrothorn:BodyPress": {
     "NAME": "Body Press",
-    "DESCRIPTION": "Deal !B! damage. NL Affected by Block modifiers instead of damage ones.",
-    "UPGRADE_DESCRIPTION": "Deal !B! damage. NL Affected by Block modifiers instead of damage ones. NL Ignores Frail."
+    "DESCRIPTION": "Deal !B! damage. NL Affected by Block modifiers instead of Damage modifiers.",
+    "UPGRADE_DESCRIPTION": "Deal !B! damage. NL Affected by Block modifiers instead of Damage modifiers. NL Ignores Frail."
   },
   "ferrothorn:BulletSeed": {
     "NAME": "Bullet Seed",
@@ -86,7 +86,7 @@
   },
   "ferrothorn:Swagger": {
     "NAME": "Swagger",
-    "DESCRIPTION": "Apply !M! Strength to the enemy to Stun him. NL Exhaust."
+    "DESCRIPTION": "Apply !M! Strength to the enemy. NL Stun. NL Exhaust."
   },
   "ferrothorn:SwordDance": {
     "NAME": "Sword Dance",
@@ -117,7 +117,7 @@
   },
   "ferrothorn:HeavySlam": {
     "NAME": "Heavy Slam",
-    "DESCRIPTION": "Deal !D! damage. NL Deals additional damage equal to your Max HP exceeding 100. If Fatal gain !M! Max HP."
+    "DESCRIPTION": "Deal !D! damage. NL Deals additional damage equal to your Max HP exceeding 100. If Fatal, gain !M! Max HP."
   },
   "ferrothorn:GyroBall": {
     "NAME": "Gyro Ball",
@@ -147,7 +147,7 @@
   },
   "ferrothorn:GrassKnot": {
     "NAME": "Grass Knot",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Repeat for each enemy with more HP than you."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Repeats for each enemy with more HP than you."
   },
   "ferrothorn:Spikes": {
     "NAME": "Spikes",
@@ -255,7 +255,7 @@
   },
   "ferrothorn:FollowMe": {
     "NAME": "Follow Me",
-    "DESCRIPTION": "Gain !B! Block. NL ALL enemies instantly attack you for !M! damage."
+    "DESCRIPTION": "Gain !B! Block. NL ALL enemies immediately attack you for !M! damage."
   },
   "ferrothorn:PoisonSting": {
     "NAME": "Poison Sting",
@@ -312,7 +312,7 @@
   },
   "ferrothorn:FoulPlay": {
     "NAME": "Foul Play",
-    "DESCRIPTION": "Deal !D! damage. NL Use the enemy's powers instead of yours to calculate damage."
+    "DESCRIPTION": "Deal !D! damage. NL Damage is calculated with the enemy's Buffs, instead of yours."
   },
   "ferrothorn:AerialAce": {
     "NAME": "Aerial Ace",
@@ -371,8 +371,8 @@
   },
   "ferrothorn:HelpingHand": {
     "NAME": "Helping Hand",
-    "DESCRIPTION": "Your next attack deals double the damage. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Your next attack deals double the damage."
+    "DESCRIPTION": "Your next Attack deals double damage. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Your next Attack deals double damage."
   },
   "ferrothorn:MagnetRise": {
     "NAME": "Magnet Rise",
@@ -409,7 +409,7 @@
   },
   "ferrothorn:HeadCharge": {
     "NAME": "Head Charge",
-    "DESCRIPTION": "Deal !D! damage. NL The enemy instantly attacks you for !M! damage."
+    "DESCRIPTION": "Deal !D! damage. NL The enemy immediately attacks you for !M! damage."
   },
   "ferrothorn:SnapTrap": {
     "NAME": "Snap Trap",
@@ -417,10 +417,10 @@
   },
   "ferrothorn:Counter": {
     "NAME": "Counter",
-    "DESCRIPTION": "Whenever an attack you receive is fully blocked, deal that much damage back to the attacker."
+    "DESCRIPTION": "Whenever you fully block an enemy's attack, deal that much damage back to the attacker."
   },
   "ferrothorn:VenomDrench": {
     "NAME": "Venom Drench",
-    "DESCRIPTION": "Gain !B! Block. NL If an enemy has Poison, NL Gain !M! ferrothorn:Stamina."
+    "DESCRIPTION": "Gain !B! Block. NL If an enemy has Poison, NL gain !M! ferrothorn:Stamina."
   }
 }
