@@ -2,6 +2,7 @@ package ferrothorn.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -53,11 +54,13 @@ public class Defog extends AbstractDynamicCard {
                 if (this.upgraded) {
                     AbstractPower pow2 = q.getPower(ArtifactPower.POWER_ID);
                     if (pow2 != null)
-                        this.addToBot(new ApplyPowerAction(q, p, new ArtifactPower(q, -pow2.amount), -pow2.amount));
+                        this.addToBot(new RemoveSpecificPowerAction(q, q, pow2));
+
+                    //this.addToBot(new ApplyPowerAction(q, p, new ArtifactPower(q, -pow2.amount), -pow2.amount));
                 }
                 AbstractPower pow = q.getPower(StrengthPower.POWER_ID);
                 if (pow != null)
-                    this.addToBot(new ApplyPowerAction(q, p, new StrengthPower(q, -pow.amount), -pow.amount));
+                    this.addToBot(new RemoveSpecificPowerAction(q, q, pow));
 
             }
         }

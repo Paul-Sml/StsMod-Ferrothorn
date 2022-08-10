@@ -23,12 +23,12 @@ public class AncientPower extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.POWER;  //
     public static final CardColor COLOR = Ferrothorn.Enums.COLOR_FERROTHORN;
 
-    private static final int COST = 2;
+    private static final int COST = 1;
     //private static final int UPGRADED_COST = 0;
 
     public AncientPower() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.magicNumber = this.baseMagicNumber = 2;
+        this.magicNumber = this.baseMagicNumber = 1;
     }
 
     // Actions the card should do.
@@ -44,8 +44,8 @@ public class AncientPower extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
-//            upgradeBaseCost(0);
+//            upgradeMagicNumber(1);
+            upgradeBaseCost(0);
         }
     }
 }

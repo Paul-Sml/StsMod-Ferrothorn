@@ -24,7 +24,7 @@ public class HyperBeam extends AbstractDynamicCard {
     public static final String ID = FerrothornMod.makeID(HyperBeam.class.getSimpleName());
     public static final String IMG = makeCardPath("HyperBeam.png");
 
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = Ferrothorn.Enums.COLOR_FERROTHORN;
@@ -33,7 +33,7 @@ public class HyperBeam extends AbstractDynamicCard {
 
     public HyperBeam() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage = 27;
+        this.baseDamage = 25;
     }
 
     @Override

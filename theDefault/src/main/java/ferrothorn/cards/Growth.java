@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.actions.watcher.ChooseOneAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.MetallicizePower;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
@@ -38,23 +39,25 @@ public class Growth extends AbstractDynamicCard {
 
     public Growth() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        this.magicNumber = this.baseMagicNumber = 2;
+        this.exhaust = true;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         if (p.stance.ID.equals(Sandstorm.STANCE_ID)) {
-            for (int i = 0; i < 2; i++) {
+            for (int i = 0; i < this.magicNumber; i++) {
                 this.addToBot(new ApplyPowerAction(p, p, new MetallicizePower(p, 1), 1));
             }
         } else if (p.stance.ID.equals(Rain.STANCE_ID)) {
             AbstractCard c = new Seed();
             c.upgrade();
-            for (int i = 0; i < 2; i++) {
+            for (int i = 0; i < this.magicNumber; i++) {
                 this.addToBot(new MakeTempCardInHandAction(c, 1));
             }
         } else if (p.stance.ID.equals(HarshSunlight.STANCE_ID)) {
-            for (int i = 0; i < 2; i++) {
+            for (int i = 0; i < this.magicNumber; i++) {
                 this.addToBot(new GainEnergyAction(1));
             }
         } else if (!this.upgraded) {
@@ -70,6 +73,9 @@ public class Growth extends AbstractDynamicCard {
             AbstractCard ss = new ferrothorn.cards.Sandstorm();
             AbstractCard rd = new RainDance();
             AbstractCard sd = new SunnyDay();
+            ss.rawDescription = languagePack.getCardStrings(ID).EXTENDED_DESCRIPTION[0];
+            rd.rawDescription = languagePack.getCardStrings(ID).EXTENDED_DESCRIPTION[1];
+            sd.rawDescription = languagePack.getCardStrings(ID).EXTENDED_DESCRIPTION[2];
             ss.cost = -2;
             rd.cost = -2;
             sd.cost = -2;
@@ -86,6 +92,7 @@ public class Growth extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeMagicNumber(1);
             this.rawDescription = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
             initializeDescription();
         }

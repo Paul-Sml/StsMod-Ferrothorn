@@ -208,7 +208,7 @@ public class Ferrothorn extends CustomPlayer {
         retVal.add(Defend.ID);
         retVal.add(Defend.ID);
         retVal.add(Defend.ID);
-        //retVal.add(Defend.ID);
+        retVal.add(Defend.ID);
 
         retVal.add(LeechSeed.ID);
         retVal.add(Growth.ID);

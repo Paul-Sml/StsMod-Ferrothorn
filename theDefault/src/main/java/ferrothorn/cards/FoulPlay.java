@@ -32,7 +32,7 @@ public class FoulPlay extends AbstractDynamicCard {
 
     public FoulPlay() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage = 8;
+        this.baseDamage = 9;
     }
 
     @Override

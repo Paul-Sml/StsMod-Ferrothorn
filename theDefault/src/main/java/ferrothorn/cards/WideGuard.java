@@ -28,7 +28,7 @@ public class WideGuard extends AbstractDynamicCard {
 
     public WideGuard() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.baseBlock = 13;
+        this.baseBlock = 11;
         this.magicNumber = this.baseMagicNumber = 1;
     }
 

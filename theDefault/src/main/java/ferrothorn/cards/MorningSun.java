@@ -58,9 +58,17 @@ public class MorningSun extends AbstractDynamicCard {
         else if (p.stance.ID.equals(HarshSunlight.STANCE_ID))
             this.addToBot(new ApplyPowerAction(p, p, new ThornsPower(p, 3), 3));
 
-        else
-            this.addToBot(new ApplyPowerAction(p, p, new StickyWebPower(p, p, 1), 1));
+//        else
+//            this.addToBot(new ApplyPowerAction(p, p, new StickyWebPower(p, p, 1), 1));
 
+    }
+
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        if (p.stance.ID.equals(Rain.STANCE_ID) || p.stance.ID.equals(Sandstorm.STANCE_ID) || p.stance.ID.equals(HarshSunlight.STANCE_ID))
+            return super.canUse(p, m);
+        else
+            return false;
     }
 
     @Override
@@ -94,7 +102,7 @@ public class MorningSun extends AbstractDynamicCard {
             }
 
         } else {//No Weather
-            this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[3]  + text;
+            this.rawDescription = text;
             initializeDescription();
         }
     }

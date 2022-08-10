@@ -26,12 +26,12 @@ public class SappySeed extends AbstractDynamicCard {
     public static final CardColor COLOR = Ferrothorn.Enums.COLOR_FERROTHORN;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 8;
+    private static final int DAMAGE = 7;
 
     public SappySeed() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = DAMAGE;
-        this.magicNumber = this.baseMagicNumber = 1;
+        this.magicNumber = this.baseMagicNumber = 2;
         this.tags.add(FerrothornMod.SEED);
         this.tags.add(CardTags.HEALING);
     }

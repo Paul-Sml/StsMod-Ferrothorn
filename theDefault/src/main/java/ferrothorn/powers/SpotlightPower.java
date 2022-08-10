@@ -64,22 +64,28 @@ public class SpotlightPower extends AbstractPower implements CloneablePowerInter
         AbstractPlayer p = AbstractDungeon.player;
 
         if (this.amount > 0) {
-                AbstractMonster monster = AbstractDungeon.getMonsters().getRandomMonster((AbstractMonster) null, true, AbstractDungeon.cardRandomRng);
+            AbstractMonster monster = AbstractDungeon.getMonsters().getRandomMonster((AbstractMonster) null, true, AbstractDungeon.cardRandomRng);
+
+            if (!monster.isDeadOrEscaped()) {
                 DamageInfo info = new DamageInfo(monster, 0, DamageInfo.DamageType.NORMAL);
                 this.addToBot(new PowerAboveCreatureAction(monster, this));
 
-            for (int i = 0; i < this.amount; i++) {
-                this.addToBot(new DamageAction(p, info, AbstractGameAction.AttackEffect.NONE));
-            }
-
-            this.addToBot(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    if (p.hasPower(Scales.POWER_ID))
-                        p.getPower(Scales.POWER_ID).onSpecificTrigger();
-                    isDone = true;
+                for (int i = 0; i < this.amount; i++) {
+                    this.addToBot(new DamageAction(p, info, AbstractGameAction.AttackEffect.NONE));
                 }
+
+
+
+                this.addToBot(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        if (p.hasPower(Scales.POWER_ID))
+                            p.getPower(Scales.POWER_ID).onSpecificTrigger();
+                        isDone = true;
+                    }
             });
+
+            }
         }
 
         super.atStartOfTurn();

@@ -94,15 +94,27 @@
   },
   "ferrothorn:Sandstorm": {
     "NAME": "Sandstorm",
-    "DESCRIPTION": "Enter ferrothorn:Sandstorm."
+    "DESCRIPTION": "ferrothorn:Grow. NL Enter ferrothorn:Sandstorm.",
+    "UPGRADE_DESCRIPTION": "ferrothorn:Grow. NL Enter ferrothorn:Sandstorm. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Enter ferrothorn:Sandstorm."
+    ]
   },
   "ferrothorn:RainDance": {
     "NAME": "Rain Dance",
-    "DESCRIPTION": "Enter ferrothorn:Rain."
+    "DESCRIPTION": "ferrothorn:Grow. NL Enter ferrothorn:Rain.",
+    "UPGRADE_DESCRIPTION": "ferrothorn:Grow. NL Enter ferrothorn:Rain. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Enter ferrothorn:Rain."
+    ]
   },
   "ferrothorn:SunnyDay": {
     "NAME": "Sunny Day",
-    "DESCRIPTION": "Enter ferrothorn:Harsh_Sunlight."
+    "DESCRIPTION": "ferrothorn:Grow. NL Enter ferrothorn:Harsh_Sunlight.",
+    "UPGRADE_DESCRIPTION": "ferrothorn:Grow. NL Enter ferrothorn:Harsh_Sunlight. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Enter ferrothorn:Harsh_Sunlight."
+    ]
   },
   "ferrothorn:WeatherBall": {
     "NAME": "Weather Ball",
@@ -329,7 +341,12 @@
   "ferrothorn:Moonlight": {
     "NAME": "Moonlight",
     "DESCRIPTION": "Choose a ferrothorn:Weather to enter. Activate exiting effects of the other two. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Choose a ferrothorn:Weather to enter. Activate exiting effects of the other two. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Innate. NL Choose a ferrothorn:Weather to enter. Activate exiting effects of the other two. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Enter ferrothorn:Sandstorm.",
+      "Enter ferrothorn:Rain.",
+      "Enter ferrothorn:Harsh_Sunlight."
+    ]
   },
   "ferrothorn:Flatter": {
     "NAME": "Flatter",
@@ -357,7 +374,7 @@
       "Gain 3 Thorns. NL ",
       "Whenever you are attacked, draw 1 card. NL ",
       "Hazards depending on Weather",
-      "No #yWeather: Whenever you are attacked, draw 1 card. NL #ySandstorm: #yScales. NL #yRain: #yToxic #ySpikes. NL #yHarsh #ySunlight: #yThorns."
+      "#ySandstorm: #yScales. NL #yRain: #yToxic #ySpikes. NL #yHarsh #ySunlight: #yThorns."
     ]
   },
   "ferrothorn:AfterYou": {
@@ -381,8 +398,13 @@
   },
   "ferrothorn:Growth": {
     "NAME": "Growth",
-    "DESCRIPTION": "ferrothorn:Grow twice. NL If you are not in a ferrothorn:Weather, enter a random one.",
-    "UPGRADE_DESCRIPTION": "ferrothorn:Grow twice. NL If you are not in a ferrothorn:Weather, choose one to enter."
+    "DESCRIPTION": "ferrothorn:Grow twice. NL If you are not in a ferrothorn:Weather, enter a random one. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "ferrothorn:Grow three times. NL If you are not in a ferrothorn:Weather, choose one to enter. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Enter ferrothorn:Sandstorm.",
+      "Enter ferrothorn:Rain.",
+      "Enter ferrothorn:Harsh_Sunlight."
+    ]
   },
   "ferrothorn:Autotomize": {
     "NAME": "Autotomize",

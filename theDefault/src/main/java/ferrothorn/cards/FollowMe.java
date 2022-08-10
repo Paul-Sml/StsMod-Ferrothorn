@@ -29,7 +29,7 @@ public class FollowMe extends AbstractDynamicCard {
 
     public FollowMe() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.baseBlock = 11;
+        this.baseBlock = 10;
         this.magicNumber = this.baseMagicNumber = 4;
     }
 

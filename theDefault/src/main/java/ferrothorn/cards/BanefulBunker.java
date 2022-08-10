@@ -27,7 +27,7 @@ public class BanefulBunker extends AbstractDynamicCard {
 
     public BanefulBunker() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.baseBlock = 13;
+        this.baseBlock = 12;
         this.magicNumber = this.baseMagicNumber = 1;
     }
 

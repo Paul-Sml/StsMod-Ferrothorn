@@ -38,6 +38,9 @@ public class Moonlight extends AbstractDynamicCard {
         AbstractCard ss = new Sandstorm();
         AbstractCard rd = new RainDance();
         AbstractCard sd = new SunnyDay();
+        ss.rawDescription = languagePack.getCardStrings(ID).EXTENDED_DESCRIPTION[0];
+        rd.rawDescription = languagePack.getCardStrings(ID).EXTENDED_DESCRIPTION[1];
+        sd.rawDescription = languagePack.getCardStrings(ID).EXTENDED_DESCRIPTION[2];
         ss.cost = -2;
         rd.cost = -2;
         sd.cost = -2;
