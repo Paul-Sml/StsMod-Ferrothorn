@@ -38,7 +38,7 @@ public class SeedFlare extends AbstractDynamicCard {
     public SeedFlare() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseDamage = DAMAGE;
-        this.magicNumber = this.baseMagicNumber = 1;
+        this.magicNumber = this.baseMagicNumber = 2;
         this.tags.add(FerrothornMod.SEED);
     }
 
@@ -55,7 +55,7 @@ public class SeedFlare extends AbstractDynamicCard {
         AbstractPlayer p = AbstractDungeon.player;
         if (!p.hand.isEmpty()) {
             for (AbstractCard c : p.hand.group) {
-                if (c.hasTag(FerrothornMod.SEED)) {
+                if (c.hasTag(FerrothornMod.SEED) && c != this) {
                     this.magicNumber++;
                 }
             }

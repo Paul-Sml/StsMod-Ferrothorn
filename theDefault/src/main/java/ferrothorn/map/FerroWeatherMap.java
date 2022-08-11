@@ -33,7 +33,7 @@ public class FerroWeatherMap {
                 }
             }
 
-            double percentCorrupt = 0.25;
+            double percentCorrupt = 0.20;
             if (AbstractDungeon.player.hasRelic(Drizzle.ID))
                 percentCorrupt = 1.0;
             int baseCorrupt = (int) Math.ceil(potentialWeatherNodes.size() * percentCorrupt);

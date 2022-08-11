@@ -296,7 +296,7 @@
   },
   "ferrothorn:SeedFlare": {
     "NAME": "Seed Flare",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Apply extra Vulnerable for each Seed card in your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Apply extra Vulnerable for each other Seed card in your hand."
   },
   "ferrothorn:DefenseCurl": {
     "NAME": "Defense Curl",
